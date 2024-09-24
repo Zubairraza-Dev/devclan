@@ -5,7 +5,6 @@ import Projects from "@/components/Projects/Projects";
 import Services from "@/components/Services/Services";
 import Technologies from "@/components/Technologies/Technologies";
 import Testimonials from "@/components/Testimonials/Testimonials";
-import Image from "next/image";
 
 export default function Home() {
   return (

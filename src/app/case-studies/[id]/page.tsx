@@ -1,6 +1,4 @@
-// app/case-studies/[id]/page.tsx
-
-"use client"; // Enforce this as a Client Component
+"use client";
 
 import { useRouter } from "next/navigation";
 interface CaseStudyDetailProps {
@@ -9,7 +7,7 @@ interface CaseStudyDetailProps {
 
 const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
   const router = useRouter();
-  const { id } = params; // Get the case study ID from params
+  const { id } = params;
 
   return (
     <div>
