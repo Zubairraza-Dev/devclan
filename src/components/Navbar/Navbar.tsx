@@ -17,31 +17,35 @@ const Navbar = () => {
       <nav className="bg-white text-[#1B232E] py-4">
         <div className="sm:container w-[93%] mx-auto flex justify-between items-center">
           <Link href="/">
-            <img src="/icons/navLogo.svg" alt="logo" className="sm:w-auto sm:h-auto h-[24px] w-[26px]"/>
+            <img
+              src="/icons/navLogo.svg"
+              alt="logo"
+              // className="sm:w-auto sm:h-auto h-[24px] w-[26px]"
+            />
           </Link>
-          <ul className="hidden md:flex space-x-6">
+          <ul className="hidden md:flex items-center space-x-6">
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <a href="#" className="hover:text-[#0755E9]">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <a href="#" className="hover:text-[#0755E9]">
                 Technologies
               </a>
             </li>
             <li>
-              <a href="/case-studies" className="hover:text-blue-400">
+              <a href="/case-studies" className="hover:text-[#0755E9]">
                 Case Studies
               </a>
             </li>
             <li>
-              <a href="/team" className="hover:text-blue-400">
+              <a href="/team" className="hover:text-[#0755E9]">
                 Team
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-blue-400">
+            <li className="rounded-lg p-2 bg-[#0755E9] flex justify-center text-white">
+              <a href="#" className="hover:text-[#1B232E]">
                 Contact Us
               </a>
             </li>
@@ -54,6 +58,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+        <hr className="bg-[#EEEEEE] h-[2px] mt-2" />
       </nav>
 
       {/* Sidebar (Mobile) */}
@@ -74,19 +79,19 @@ const Navbar = () => {
         {/* Sidebar Links */}
         <ul className="flex flex-col space-y-6 pl-6 pt-6">
           <li>
-            <a href="#" className="text-[#1B232E] text-xl hover:text-blue-400">
+            <a href="#" className="text-[#1B232E] text-xl hover:text-[#0755E9]">
               Services
             </a>
           </li>
           <li>
-            <a href="#" className="text-[#1B232E] text-xl hover:text-blue-400">
+            <a href="#" className="text-[#1B232E] text-xl hover:text-[#0755E9]">
               Technologies
             </a>
           </li>
           <li>
             <a
               href="/case-studies"
-              className="text-[#1B232E] text-xl hover:text-blue-400"
+              className="text-[#1B232E] text-xl hover:text-[#0755E9]"
             >
               Case Studies
             </a>
@@ -94,13 +99,13 @@ const Navbar = () => {
           <li>
             <a
               href="/team"
-              className="text-[#1B232E] text-xl hover:text-blue-400"
+              className="text-[#1B232E] text-xl hover:text-[#0755E9]"
             >
               Team
             </a>
           </li>
           <li>
-            <a href="#" className="text-[#1B232E] text-xl hover:text-blue-400">
+            <a href="#" className="text-[#1B232E] text-xl hover:text-[#0755E9]">
               Contact Us
             </a>
           </li>

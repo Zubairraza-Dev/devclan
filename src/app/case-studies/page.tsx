@@ -3,6 +3,7 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 import { caseStudies } from "@/data/caseStudies";
 import Image from "next/image";
 import caseAnimation from "../../assets/icons/caseAnimatedIcon.svg";
+import CaseStudyCardLg from "@/components/CaseStudyCard/CaseStudyCardLg";
 
 const CaseStudiesPage = () => {
   return (
@@ -31,19 +32,19 @@ const CaseStudiesPage = () => {
       </div>
 
       {/* explore section */}
-      <div className="container mx-auto py-8 bg-white">
+      <div className="sm:container w-[93%] mx-auto py-8 bg-white">
         <h1 className="text-3xl font-bold mb-6">Explore Our Work</h1>
-        <div className="flex items-center flex-wrap gap-4">
+        <div className="flex items-center justify-between flex-wrap gap-x-2 gap-y-4">
           {caseStudies.map((caseStudy) => (
             <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
               {/* No need to wrap with <a> */}
-              <CaseStudyCard
+              <CaseStudyCardLg
                 title={caseStudy.title}
                 description={caseStudy.description}
                 image={caseStudy.image}
                 background={caseStudy.background}
-                height="490px"
-                width="780px"
+                // height="490px"
+                // width="780px"
               />
             </Link>
           ))}
