@@ -12,7 +12,7 @@ const CaseStudiesPage = () => {
         <Image
           alt="animation image "
           src={caseAnimation}
-          className={`absolute ml-[192px] sm:ml-[380px] -mt-[57px] sm:-mt-[70px] animate-rotate sm:w-auto sm:h-auto w-[419px] h-[418px]`}
+          className={`absolute ml-[192px] sm:ml-[380px] -mt-[85px] sm:-mt-[70px] animate-rotate sm:w-auto sm:h-auto w-[419px] h-[418px]`}
         />
         <div className="text-white flex flex-col justify-center sm:gap-10 gap-4 h-full relative w-[91%] mx-auto">
           <div className="sm:text-[32px] text-[16px] -space-x-[5px]">
