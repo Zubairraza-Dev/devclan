@@ -43,10 +43,8 @@ const TechnologyCard: React.FC<TechnologyCardProp> = ({
                                             ${background === "dark" ?
                                             "bg-[#0755E9]" 
                                             : "bg-[#1B232E]"}
-                            sm:w-[261px] w-[83px] transition-transform duration-[1200ms] ease-in-out rounded-[10px] sm:rounded-[30px] flex items-center box-border
-                            ${cornerCard === "right" && "sm:pr-3 pr-1 justify-end"}
-                            ${cornerCard === "mid" && " justify-center"}
-                            ${cornerCard === "left" && "sm:pl-3 pl-1 justify-start"}
+                            sm:w-[261px] w-[83px] justify-center transition-transform duration-[1200ms] ease-in-out rounded-[10px] sm:rounded-[30px] flex items-center box-border
+                            
                   `}>
                         <Image src={image} alt="react icon" className={`sm:h-auto sm:w-auto 
                             ${(cornerBoxImage === "ps" || cornerBoxImage === "xd")?" w-[26px]   h-[23px] ":"w-[50%]  h-[60%] "}`} />

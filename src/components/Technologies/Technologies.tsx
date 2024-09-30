@@ -52,15 +52,14 @@ const ScrollingBoxes = () => {
  
 
   return (
-    <div className="sm:my-32 my-0 w-full overflow-hidden mx-auto">
-    <div className="w-[110%] mx-auto -ml-[5%]">
+    <div className="sm:mt-32 my-0 w-full  ">
+      <div className="font-bold sm:text-[48px] text-[24px] leading-[48px] space-x-[-5px] text-[#1F1F1F] flex justify-center mb-3 ">Technologies We Use</div>
+    {/* <div className="w-[110%] mx-auto overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide"> */}
 
-      <div className="font-bold sm:text-[48px] text-[24px] leading-[48px] space-x-[-5px] text-[#1F1F1F] flex justify-center mb-3 ">
-      Technologies We Use
-      </div>
-    <div className="flex items-center sm:min-h-screen sm:h-[830px] h-[230px] justify-center sm:gap-4 gap-1.5 ">
+    <div className="flex items-center sm:min-h-screen sm:h-[830px] h-[230px] justify-between sm:gap-4 gap-1.5 
+      overflow-auto scroll-smooth hide-scrollbar ">
 
-      <div ref={boxRef} className="w-full flex flex-col items-center">
+      <div ref={boxRef} className="w-full flex flex-col items-center ">
         
       <TechnologyCard 
         title="smallBlue"
@@ -183,7 +182,7 @@ const ScrollingBoxes = () => {
           />
       </div>
       
-    </div>
+    {/* </div> */}
     </div>
     </div>
   );

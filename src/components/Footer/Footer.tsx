@@ -26,13 +26,13 @@ const Footer = () => {
                   </h1>
                   <div className="flex flex-col gap-2">
                     <p className="sm:text-md text-sm text-[#D1D1D1]">About</p>
-                    <p className="sm:text-md text-sm text-[#D1D1D1]">
-                      How it Works
-                    </p>
-                    <p className="sm:text-md text-sm text-[#D1D1D1]">Contact</p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">Serivce </p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">Technology</p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">Case Studies</p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">Team</p>
                   </div>
                 </div>
-                <div className="flex flex-col items-start gap-3 ">
+                {/* <div className="flex flex-col items-start gap-3 ">
                   <h1 className="sm:text-2xl text-[18px] font-semibold sm:font-bold">
                     Help
                   </h1>
@@ -49,7 +49,7 @@ const Footer = () => {
                       Terms & Conditions
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex flex-col items-start gap-3 ">
                   <h1 className="sm:text-xl text-[18px] font-semibold sm:font-bold">
