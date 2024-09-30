@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CaseStudyCard from "@/components/CaseStudyCard";
+import CaseStudyCard from "@/components/CaseStudyCard/CaseStudyCard";
 import { caseStudies } from "@/data/caseStudies";
 import Image from "next/image";
 import caseAnimation from "../../assets/icons/caseAnimatedIcon.svg";
