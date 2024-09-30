@@ -35,10 +35,10 @@ const Projects = () => {
 
   return (
     <>
-      <div className="container mx-auto py-8">
+      <div className="sm:container w-[93%] mx-auto py-8">
         <div className="flex items-center justify-between mb-4">
-          <h1 className="text-4xl font-bold">Our Projects</h1>
-          <div className="flex items-center gap-2">
+          <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects</h1>
+          <div className="sm:flex items-center gap-2  hidden">
             <Link href="/case-studies">
               <button className="rounded-3xl border p-2">View All</button>
             </Link>

@@ -15,9 +15,9 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <nav className="bg-white text-[#1B232E] py-4">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="sm:container w-[93%] mx-auto flex justify-between items-center">
           <Link href="/">
-            <img src="/icons/navLogo.svg" alt="logo" />
+            <img src="/icons/navLogo.svg" alt="logo" className="sm:w-auto sm:h-auto h-[24px] w-[26px]"/>
           </Link>
           <ul className="hidden md:flex space-x-6">
             <li>
