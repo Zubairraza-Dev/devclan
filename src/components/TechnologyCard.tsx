@@ -7,7 +7,8 @@ interface TechnologyCardProp {
     image?: any;
     background?: any;
     scrollDirection : any;
-    cornerCard : any;
+    cornerCard? : string;
+    cornerBoxImage? : string;
 }
 
 const TechnologyCard: React.FC<TechnologyCardProp> = ({
@@ -16,7 +17,8 @@ const TechnologyCard: React.FC<TechnologyCardProp> = ({
     image,
     background,
     scrollDirection,
-    cornerCard
+    cornerCard,
+    cornerBoxImage
 }) => {
     return(
                  <div className={`
@@ -46,7 +48,8 @@ const TechnologyCard: React.FC<TechnologyCardProp> = ({
                             ${cornerCard === "mid" && " justify-center"}
                             ${cornerCard === "left" && "sm:pl-3 pl-1 justify-start"}
                   `}>
-                        <Image src={image} alt="react icon" className="sm:w-auto w-[50%] sm:h-auto h-[60%]" />
+                        <Image src={image} alt="react icon" className={`sm:h-auto sm:w-auto 
+                            ${(cornerBoxImage === "ps" || cornerBoxImage === "xd")?" w-[26px]   h-[23px] ":"w-[50%]  h-[60%] "}`} />
                 </div>
     )
 }

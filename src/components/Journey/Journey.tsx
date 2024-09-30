@@ -8,7 +8,7 @@ import smallPencil from "../../assets/images/mobilePencil.svg"
 
 const Journey = () => {
   return (
-    <div className="bg-white  py-8 sm:container w-[93%] mx-auto">
+    <div className="bg-white  py-8 sm:container w-[93%] mx-auto overflow-hidden">
       <div className="sm:text-4xl text-[24px] font-bold mb-6 sm:text-start text-center"> Development Journey</div>
       <div className="flex flex-col sm:gap-20 gap-10 sm:my-20 my-10">
         <Image alt="smallPencil" src={smallPencil} className="mx-auto sm:hidden block"/>
@@ -34,12 +34,19 @@ const Journey = () => {
             </div>
             
         </div>
-        <div className="sm:flex w-full relative  hidden">
-          <Image alt="pencil image" src={pencil1} className=" -mr-11"/>
-          <Image alt="pencil image" src={pencil2} className=" -mr-6"/>
-          <Image alt="pencil image" src={pencil3} className=" -mr-12"/>
-          <Image alt="pencil image" src={pencil4} className=" -mr-11"/>
-          <Image alt="pencil image" src={pencil5} className=" -mr-10"/>
+        {/* <div className="sm:flex  relative  hidden">
+          <Image alt="pencil image" src={pencil1} className="-mr-11"/>
+          <Image alt="pencil image" src={pencil2} className="-mr-6"/>
+          <Image alt="pencil image" src={pencil3} className="-mr-12"/>
+          <Image alt="pencil image" src={pencil4} className="-mr-11"/>
+          <Image alt="pencil image" src={pencil5} className="-mr-10"/>
+        </div> */}
+        <div className="sm:flex  relative  hidden">
+          <Image alt="pencil image" src={pencil1} className="sm:w-auto sm:h-auto w-[250px] h-[120px] object-fill  sm:-mr-11  -mr-11"/>
+          <Image alt="pencil image" src={pencil2} className="sm:w-auto sm:h-auto w-[250px] h-[120px] object-fill  sm:-mr-6  -mr-[34px]"/>
+          <Image alt="pencil image" src={pencil3} className="sm:w-auto sm:h-auto w-[250px] h-[120px] object-fill  sm:-mr-12  -mr-12"/>
+          <Image alt="pencil image" src={pencil4} className="sm:w-auto sm:h-auto w-[250px] h-[120px] object-fill  sm:-mr-11  -mr-[73px]"/>
+          <Image alt="pencil image" src={pencil5} className="sm:w-auto sm:h-auto w-[250px] h-[120px] object-fill  sm:-mr-10  -mr-10"/>
         </div>
 
         <div className="flex justify-center gap-7 sm:flex-row flex-col">

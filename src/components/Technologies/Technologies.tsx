@@ -6,11 +6,11 @@ import apple from "../../assets/icons/appleLightT.svg"
 import vue from "../../assets/icons/vueLightT.svg"
 import android from "../../assets/icons/androidLightT.svg"
 import diamondLight from "../../assets/icons/diamondLightT.svg"
-import c from "../../assets/icons/cLightT.svg"
+import c from "../../assets/icons/cLightTech.svg"
 import react from "../../assets/icons/reactLightT.svg"
 import figma from "../../assets/icons/figmaLightT.svg"
 import python from "../../assets/icons/pythonLightT.svg"
-import java from "../../assets/icons/javaLightT.svg"
+import java from "../../assets/icons/javaLightTech.svg"
 import xd from "../../assets/icons/xdLightT.svg"
 import box from "../../assets/icons/boxLightT.svg"
 
@@ -52,12 +52,13 @@ const ScrollingBoxes = () => {
  
 
   return (
-    <div className="sm:my-32 my-0">
+    <div className="sm:my-32 my-0 w-full overflow-hidden mx-auto">
+    <div className="w-[110%] mx-auto -ml-[5%]">
 
       <div className="font-bold sm:text-[48px] text-[24px] leading-[48px] space-x-[-5px] text-[#1F1F1F] flex justify-center mb-3 ">
       Technologies We Use
       </div>
-    <div className="flex items-center sm:min-h-screen sm:h-[830px] h-[230px] justify-center sm:gap-6 gap-1.5 ">
+    <div className="flex items-center sm:min-h-screen sm:h-[830px] h-[230px] justify-center sm:gap-4 gap-1.5 ">
 
       <div ref={boxRef} className="w-full flex flex-col items-center">
         
@@ -68,6 +69,8 @@ const ScrollingBoxes = () => {
         image={psLight}
         scrollDirection={scrollDirection}
         cornerCard="right"
+        cornerBoxImage="ps"
+
         />
         <TechnologyCard 
         title="smallDark"
@@ -167,6 +170,8 @@ const ScrollingBoxes = () => {
           image={xd}
           scrollDirection={scrollDirection}
           cornerCard="left"
+          cornerBoxImage="xd"
+
           />
           <TechnologyCard 
           title="largeDark"
@@ -178,6 +183,7 @@ const ScrollingBoxes = () => {
           />
       </div>
       
+    </div>
     </div>
     </div>
   );
