@@ -1,17 +1,32 @@
 import Link from "next/link";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { caseStudies } from "@/data/caseStudies";
+import Image from "next/image";
+import caseAnimation from "../../assets/icons/caseAnimatedIcon.svg";
 
 const CaseStudiesPage = () => {
   return (
     <>
       {/* hero section */}
-      <div className="container mx-auto py-8 bg-custom-gradient h-[615px] w-full rounded-lg text-white">
-        <div className="text-white">
-          <h3>CaseStudies</h3>
-          <h1>Latest Challenges</h1>
-          <h1>Need latest solutions being creative</h1>
-          <button className="bg-blue-900 rounded-xl p-2">Get In Touch</button>
+      <div className="sm:container w-[93%] mx-auto py-8 bg-custom-gradient sm:h-[816px] h-[235px] rounded-lg text-white overflow-hidden relative">
+        <Image
+          alt="animation image "
+          src={caseAnimation}
+          className={`absolute ml-[192px] sm:ml-[380px] -mt-[57px] sm:-mt-[70px] animate-rotate sm:w-auto sm:h-auto w-[419px] h-[418px]`}
+        />
+        <div className="text-white flex flex-col justify-center sm:gap-10 gap-4 h-full relative w-[91%] mx-auto">
+          <div className="sm:text-[32px] text-[16px] -space-x-[5px]">
+            Case <span className="text-[#0755E9]">Studies</span>
+          </div>
+
+          <div className=" text-[24px] sm:text-[70px] leading-[30px] sm:leading-[90px] -space-x-[5px]">
+            Latest Challenges <br />
+            Need latest solutions being creative
+          </div>
+
+          <div className="w-[130px] sm:h-[60px] h-[44px] sm:rounded-[10px] rounded-[8px] bg-[#0755E9] flex justify-center text-white font-bold sm:text-[18px] text-[16px] items-center sm:mt-6 mt-2 ">
+            Get in Touch
+          </div>
         </div>
       </div>
 
