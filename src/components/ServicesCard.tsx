@@ -20,7 +20,7 @@ const serviceCard: React.FC<serviceCardProp> = ({
 }) => {
     return(
                 <div className={` ${(title === "AI" || title === "Web Development") ? "bg-gradient-to-r from-[#0F2D48] to-[#0755E9]" : "bg-[#FAFAFA]"}
-                 sm:w-[648px] gap-8 sm:mt-6 w-full  sm:h-[450px] h-[278px] rounded-[20px]  box-border  relative group mx-auto mt-4 overflow-hidden `}>
+                 sm:w-[570px] gap-8 sm:mt-6 w-full  sm:h-[450px] h-[278px] rounded-[20px]  box-border  relative group mx-auto mt-4 overflow-hidden `}>
                     
                     <div className={`${(title === "AI" || title === "Web Development") ? "text-white" : "text-[#1B232E]"} text-[#1F1F1F]  font-bold sm:text-[40px] text-[24px]  sm:mt-[56px] mt-[12px] absolute sm:w-[80%] w-[92%] mx-auto left-0 right-0 `}>
                             {title}
