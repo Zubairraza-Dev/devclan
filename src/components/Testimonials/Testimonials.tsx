@@ -7,8 +7,8 @@ const Testimonials = () => {
       <h1 className="sm:text-4xl text-[24px] font-bold mb-6 sm:text-start text-center">
         What Our Clients Say About Us{" "}
       </h1>
-      {/* <div className="sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex flex-col items-center "> */}
-      <div className="flex flex-wrap  justify-between gap-5 sm:my-20  my-10">
+       
+      <div className="flex flex-wrap justify-between  gap-5 sm:my-20  my-10">
         {testimonialsData.map((testimonial) => (
           <div
             key={testimonial.id}
