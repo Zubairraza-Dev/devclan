@@ -38,13 +38,15 @@ const Projects = () => {
       <div className="sm:container w-[93%] mx-auto py-8">
         <div className="flex items-center justify-between mb-4">
           <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects</h1>
-          <div className="sm:flex items-center gap-2  hidden">
+          <div className="sm:flex items-center gap-2 hidden">
             <Link href="/case-studies">
-              <button className="rounded-3xl border p-2">View All</button>
+              <button className="rounded-3xl border p-2 hover:bg-[#0755E9] hover:text-white">
+                View All
+              </button>
             </Link>
             <button
               onClick={handlePrev}
-              className={`rounded-full border h-10 w-10 hover:bg-blue-800 hover:text-white  ${
+              className={`rounded-full border h-10 w-10 hover:bg-[#0755E9] hover:text-white  ${
                 currentIndex === 0
                   ? "bg-gray-300 hover:bg-gray-300 cursor-not-allowed"
                   : ""
@@ -55,7 +57,7 @@ const Projects = () => {
             </button>
             <button
               onClick={handleNext}
-              className={`rounded-full border h-10 w-10 hover:bg-blue-800 hover:text-white ${
+              className={`rounded-full border h-10 w-10 hover:bg-[#0755E9] hover:text-white ${
                 currentIndex + itemsToShow >= caseStudies.length
                   ? "bg-gray-300 hover:bg-gray-300 cursor-not-allowed"
                   : ""
@@ -77,8 +79,8 @@ const Projects = () => {
               <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
                 <CaseStudyCard
                   title={caseStudy.title}
-                  description={caseStudy.description}
-                  image={caseStudy.image}
+                  description={caseStudy.shortDescription}
+                  image={caseStudy.cardImg}
                   background={caseStudy.background}
                   // className="scroll-snap-start"
                 />

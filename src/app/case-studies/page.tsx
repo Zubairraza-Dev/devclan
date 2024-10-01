@@ -11,7 +11,7 @@ const CaseStudiesPage = () => {
       {/* hero section */}
       <div className="sm:container w-[93%] mx-auto py-8 bg-custom-gradient sm:h-[816px] h-[235px] rounded-lg text-white overflow-hidden relative">
         <Image
-          alt="animation image "
+          alt="animation image"
           src={caseAnimation}
           className={`absolute ml-[192px] sm:ml-[380px] -mt-[85px] sm:-mt-[70px] animate-rotate sm:w-auto sm:h-auto w-[419px] h-[418px]`}
         />
@@ -40,8 +40,8 @@ const CaseStudiesPage = () => {
               {/* No need to wrap with <a> */}
               <CaseStudyCardLg
                 title={caseStudy.title}
-                description={caseStudy.description}
-                image={caseStudy.image}
+                description={caseStudy.shortDescription}
+                image={caseStudy.cardImg}
                 background={caseStudy.background}
                 // height="490px"
                 // width="780px"
