@@ -9,7 +9,7 @@ import React from 'react'
 import circle1 from "../assets/icons/Ornament 2.svg"
 import circle2 from "../assets/icons/Ornament 3.svg"
 import circle3 from "../assets/icons/Ornament 4.svg"
-import CaseStudyCard from "./CaseStudyCard";
+import CaseStudyCard from "./CaseStudyCard/CaseStudyCard";
 
 
 

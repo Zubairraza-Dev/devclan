@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { caseStudies } from "@/data/caseStudies";
-import CaseStudyCard from "../CaseStudyCard";
+import CaseStudyCard from "../CaseStudyCard/CaseStudyCard";
 import Link from "next/link";
 
 const Projects = () => {
