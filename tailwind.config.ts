@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customDark : "#1B232E",
+        customBlue : "#0755E9"
       },
       backgroundImage: {
         "custom-gradient":
@@ -26,6 +28,9 @@ const config: Config = {
       },
       animation: {
         rotate: "rotate 100s infinite linear",
+      },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'], // Use the imported 'Roboto' font
       },
     },
   },
