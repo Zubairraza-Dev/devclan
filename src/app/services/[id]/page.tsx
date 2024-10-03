@@ -1,4 +1,6 @@
+import ServiceDetailCard from "@/components/ServiceDetailCard";
 import { services } from "@/data/services";
+import { servicesDetail } from "@/data/serviceDetails"
 
 interface ServiceDetailProps {
   params: {
@@ -14,12 +16,26 @@ const ServiceDetail = ({ params }: ServiceDetailProps) => {
     return <div>Service not found</div>;
   }
 
+  const serviceDetails = servicesDetail.find((detail) => detail.id === serviceId);
+
+  if (!serviceDetails) {
+    return <div>Service details not found</div>;
+  }
+
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-4xl font-bold">{service.title}</h1>
-      <p>{service.description}</p>
-      <img src={service.image} alt={service.title} />
-      <p>dummy data hello world</p>
+    <div className="w-[93%] sm:container mx-auto py-8">
+       
+            <ServiceDetailCard 
+            title={serviceDetails.title}
+            description={serviceDetails.description}
+            image={serviceDetails.image}
+            detailPoints={serviceDetails.deatilPoint} 
+            serviceTitle = {serviceDetails.serviceTitle}
+            detailServices = {serviceDetails.detailServices}
+            icons={serviceDetails.icons}
+            developmentPhase = {serviceDetails.developmentPhases}
+            portfolio = {serviceDetails.portfolio}
+            />
     </div>
   );
 };
