@@ -7,7 +7,7 @@ import CaseStudyCardLg from "@/components/CaseStudyCard/CaseStudyCardLg";
 
 const CaseStudiesPage = () => {
   return (
-    <>
+    <div>
       {/* hero section */}
       <div className="sm:container w-[93%] mx-auto py-8 bg-custom-gradient sm:h-[816px] h-[235px] rounded-lg text-white overflow-hidden relative">
         <Image
@@ -50,7 +50,7 @@ const CaseStudiesPage = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

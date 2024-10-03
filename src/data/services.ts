@@ -1,5 +1,5 @@
 import aiHand from "../assets/images/AIhand.svg"
-import laptop from "../assets/images/laptop.svg"
+import laptop from "../assets/images/webLaptop.svg"
 import mobile from "../assets/images/mobile.svg"
 import designPhone from "../assets/images/designPhone.svg"
 import ps from "../assets/icons/ps.svg"

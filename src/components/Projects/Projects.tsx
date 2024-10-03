@@ -4,6 +4,13 @@ import { useState, useRef } from "react";
 import { caseStudies } from "@/data/caseStudies";
 import CaseStudyCard from "../CaseStudyCard/CaseStudyCard";
 import Link from "next/link";
+import leftArrow from "../../assets/icons/leftArrow.svg"
+import rightArrow from "../../assets/icons/rightArrow.svg"
+import Image from "next/image";
+// import RightSvgArrow from "../SvgArrow/LeftSvgArrow";
+import LeftSvgArrow from "../SvgArrow/LeftSvgArrow";
+import RightVector from "../../assets/icons/rightVector.svg"
+import RightArrowSvg from "../RightArrowSvg.tsx/RightArrowSvg";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,17 +41,17 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="sm:container w-[93%] mx-auto py-8">
         <div className="flex items-center justify-between mb-4">
           <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects</h1>
           <div className="sm:flex items-center gap-2 hidden">
             <Link href="/case-studies">
-              <button className="rounded-3xl border p-2 hover:bg-[#0755E9] hover:text-white">
+              <button className="rounded-3xl border p-2 w-24 h-12 hover:bg-[#0755E9] hover:text-white">
                 View All
               </button>
             </Link>
-            <button
+            {/* <button
               onClick={handlePrev}
               className={`rounded-full border h-10 w-10 hover:bg-[#0755E9] hover:text-white  ${
                 currentIndex === 0
@@ -54,8 +61,8 @@ const Projects = () => {
               disabled={currentIndex === 0}
             >
               &lt;
-            </button>
-            <button
+            </button> */}
+             {/* <button
               onClick={handleNext}
               className={`rounded-full border h-10 w-10 hover:bg-[#0755E9] hover:text-white ${
                 currentIndex + itemsToShow >= caseStudies.length
@@ -65,6 +72,24 @@ const Projects = () => {
               disabled={currentIndex + itemsToShow >= caseStudies.length}
             >
               &gt;
+            </button> */}
+
+            <button
+              onClick={handlePrev}
+              className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center   `}
+              disabled={currentIndex === 0}
+            >  
+              <LeftSvgArrow color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"} />
+            </button>
+
+            <button
+              onClick={handleNext}
+              className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center  `}
+              disabled={currentIndex + itemsToShow >= caseStudies.length}
+            >
+              {/* <RightSvgArrow color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"}/> */}
+              {/* <Image alt="arrow" src={RightVector}/> */}
+            <RightArrowSvg color={currentIndex === 0 ? "#1B232E" :"#D1D1D1" }/>
             </button>
           </div>
         </div>
@@ -88,7 +113,7 @@ const Projects = () => {
             ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

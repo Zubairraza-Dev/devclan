@@ -35,7 +35,7 @@ const config: Config = {
         blink: "blink 1s infinite",
       },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'], // Use the imported 'Roboto' font
+        roboto: ['Roboto', 'sans-serif'], 
       },
     },
   },
