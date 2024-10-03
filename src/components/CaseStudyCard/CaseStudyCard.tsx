@@ -34,7 +34,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
       <Image
         src={image}
         alt="Project Image"
-        className="object-cover"
+        className="object-cover "
         // layout="fill"
         // objectFit="cover"
         // className="rounded-lg"
