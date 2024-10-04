@@ -28,7 +28,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
     //   } rounded-lg p-4 hover:shadow-lg overflow-hidden transition-all duration-300 group`}
     // >
     <div
-      className={`relative flex flex-col justify-center border   rounded-lg h-[185px] sm:h-[330px] w-[293px] sm:w-[536px] hover:shadow-lg overflow-hidden transition-all duration-300 group`}
+      className={`relative flex flex-col justify-center border   rounded-lg h-[185px] sm:h-[330px] w-[293px] sm:w-[536px] hover:shadow-[0_4px_15px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-300 group`}
     >
       {/* Background Image */}
       <Image

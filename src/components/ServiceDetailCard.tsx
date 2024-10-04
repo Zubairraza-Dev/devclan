@@ -137,7 +137,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
           <div className='w-full flex justify-between items-center my-14'>
             {
               icons?.map( (e) => (
-                <div className='shadow-xl flex justify-center items-center w-[23%] h-[174px] rounded-[10px]'>
+                <div className='shadow-[0_4px_15px_rgba(0,0,0,0.5)] flex justify-center items-center w-[23%] h-[174px] rounded-[10px]'>
                   <Image alt='tools image' src={e}/>
                 </div>
               ))

@@ -52,7 +52,8 @@ const serviceCard: React.FC<serviceCardProp> = ({
                     <div className='flex justify-end relative h-full items-end border-none overflow-hidden'>
                                 <Image 
                                 alt='design Image'
-                                className={`group-hover:scale-50  transform transition-transform origin-bottom-right border-none duration-700 ease-in-out sm:block hidden ${title === "Mobile Development" && "w-[287px] h-[585px] -mb-[147px] group-hover:scale-75"}`}
+                                className={`group-hover:scale-50  transform transition-transform origin-bottom-right border-none duration-700 ease-in-out sm:block hidden ${title === "Mobile Development" && "w-[287px] h-[585px] -mb-[147px] group-hover:scale-75"} 
+                                    ${title === "Web Development" && "h-[300px] -mr-[23px]"}`}
                                 src={image}
                                 height={357}
                                 width={465}
