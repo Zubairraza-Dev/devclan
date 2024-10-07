@@ -45,7 +45,12 @@ import processWeb2 from "../assets/images/processWeb2.svg"
 import processWeb3 from "../assets/images/processWeb3.svg"
 import processWeb4 from "../assets/images/processWeb4.svg"
 
-
+import project1 from "../assets/images/redwavePortfolio.svg"
+import project2 from "../assets/images/project2.svg"
+import project3 from "../assets/images/project3.svg"
+import project4 from "../assets/images/project4.svg"
+import project5 from "../assets/images/project5.svg"
+import project6 from "../assets/images/project6.svg"
  
 
 
@@ -64,12 +69,13 @@ export const servicesDetail = [
         ],
         icons : [ps, diamond, figma, inLogo],
         portfolio : [
-              { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-              { id: 2, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-              { id: 3, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
-              { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-              { id: 5, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-              { id: 6, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
+              { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: project1 },
+              { id: 2, title: "Case Study 2", description: "Description for case study 2", image: project2 },
+              { id: 3, title: "Case Study 3", description: "Description for case study 3", image: project3 },
+              { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: project4 },
+              { id: 5, title: "Case Study 2", description: "Description for case study 2", image: project5 },
+              { id: 6, title: "Case Study 3", description: "Description for case study 3", image: project6 },
+              
         ]
          },
         { id: 2, title: "Future Ready AI Development Services",image: ai , description: "Solve the pressing product design challenges with Dev Clan UI/UX design",
@@ -94,12 +100,12 @@ export const servicesDetail = [
             {id: 4, smallHeading: "Phase 4", title: "Heading 4", description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu luctus lorem, in tempus mauris. Donec vulputate non neque placerat mattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue."},
         ],
         portfolio : [
-            { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-            { id: 2, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-            { id: 3, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
-            { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-            { id: 5, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-            { id: 6, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
+            { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: project1 },
+            { id: 2, title: "Case Study 2", description: "Description for case study 2", image: project2 },
+            { id: 3, title: "Case Study 3", description: "Description for case study 3", image: project3 },
+            { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: project4 },
+            { id: 5, title: "Case Study 2", description: "Description for case study 2", image: project5 },
+            { id: 6, title: "Case Study 3", description: "Description for case study 3", image: project6 },
       ]
          },
         { id: 3, title: "Web App Development", image: web , description: "Solve the pressing product design challenges with Dev Clan UI/UX design",
@@ -118,12 +124,12 @@ export const servicesDetail = [
         ],
         icons : [vs, github, docker, heroko],
         portfolio : [
-            { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-            { id: 2, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-            { id: 3, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
-            { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-            { id: 5, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-            { id: 6, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
+            { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: project1 },
+            { id: 2, title: "Case Study 2", description: "Description for case study 2", image: project2 },
+            { id: 3, title: "Case Study 3", description: "Description for case study 3", image: project3 },
+            { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: project4 },
+            { id: 5, title: "Case Study 2", description: "Description for case study 2", image: project5 },
+            { id: 6, title: "Case Study 3", description: "Description for case study 3", image: project6 },
       ],
       developmentProcess:[
         { id: 1, title: "Planning",description: "Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue.",  image: processWeb1 },
@@ -150,12 +156,12 @@ export const servicesDetail = [
         ],
         icons : [html, html5, angular, next],
         portfolio : [
-            { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-            { id: 2, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-            { id: 3, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
-            { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: portfolio1 },
-            { id: 5, title: "Case Study 2", description: "Description for case study 2", image: portfolio2 },
-            { id: 6, title: "Case Study 3", description: "Description for case study 3", image: portfolio3 },
+            { id: 1, title: "Case Study 2",description: "Description for case study 1",  image: project1 },
+            { id: 2, title: "Case Study 2", description: "Description for case study 2", image: project2 },
+            { id: 3, title: "Case Study 3", description: "Description for case study 3", image: project3 },
+            { id: 4, title: "Case Study 2",description: "Description for case study 1",  image: project4 },
+            { id: 5, title: "Case Study 2", description: "Description for case study 2", image: project5 },
+            { id: 6, title: "Case Study 3", description: "Description for case study 3", image: project6 },
       ],
       developmentProcess:[
         { id: 1, title: "Planning", description: "Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue.",  image: mobileProcess1 },
