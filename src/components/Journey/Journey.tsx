@@ -1,19 +1,20 @@
-import Image from "next/image"
-import pencil1 from "../../assets/images/pencil1.svg"
-import pencil2 from "../../assets/images/pencil2.svg"
-import pencil3 from "../../assets/images/pencil3.svg"
-import pencil4 from "../../assets/images/pencil4.svg"
-import pencil5 from "../../assets/images/pencil5.svg"
-import smallPencil from "../../assets/images/mobilePencil.svg"
-import DevelopmentJourneyIcon from "./DevelopmentJourneyIcon"
+import Image from "next/image";
+import pencil1 from "../../assets/images/pencil1.svg";
+import pencil2 from "../../assets/images/pencil2.svg";
+import pencil3 from "../../assets/images/pencil3.svg";
+import pencil4 from "../../assets/images/pencil4.svg";
+import pencil5 from "../../assets/images/pencil5.svg";
+import smallPencil from "../../assets/images/mobilePencil.svg";
+import DevelopmentJourneyIcon from "./DevelopmentJourneyIcon";
+import PencilAnimation from "../PencilAnimationJson/PencilAnimation";
 
 const Journey = () => {
   return (
     <div className="container mx-auto my-32">
       <div className="text-[#1F1F1F]  font-bold sm:text-[58px] text-[24px] sm:text-start text-center ">
-          Development Journey
-        </div>
-      <DevelopmentJourneyIcon/>
+        Development Journey
+      </div>
+      <PencilAnimation />
     </div>
     // <div className="bg-white  py-8 sm:container w-[93%] mx-auto overflow-hidden">
     //   <div className="sm:text-4xl text-[24px] font-bold mb-6 sm:text-start text-center"> Development Journey</div>
@@ -39,7 +40,7 @@ const Journey = () => {
     //           <div>We continuously maintain the app, address issues, and
     //           implement updates to improve features and performance to meet evolving user needs </div>
     //         </div>
-            
+
     //     </div>
     //     {/* <div className="sm:flex  relative  hidden">
     //       <Image alt="pencil image" src={pencil1} className="-mr-11"/>
@@ -70,7 +71,7 @@ const Journey = () => {
     //           <div className="font-bold text-[24px]">Deployment and Launch</div>
     //           <div>We make the app accessible to users and excute a successfull launch strategy</div>
     //         </div>
-            
+
     //     </div>
     //   </div>
     // </div>
