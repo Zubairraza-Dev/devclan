@@ -15,8 +15,7 @@ import mongo from "@/assets/icons/mongodbIcon.svg";
 import docker from "@/assets/icons/dockerIcon.svg";
 
 // svg components 
-import Project1 from "../components/SvgComponent/Project1"
-
+import project1 from "../assets/images/redwaveAboutImage.svg"
 import project2 from "../assets/images/project2.svg"
 import project3 from "../assets/images/project3.svg"
 import project4 from "../assets/images/project4.svg"
@@ -24,12 +23,16 @@ import project5 from "../assets/images/project5.svg"
 import project6 from "../assets/images/project6.svg"
 import project7 from "../assets/images/project7.svg"
 
+import funcationality1 from "../assets/images/functionalityImage.svg"
+import funcationality2 from "../assets/images/functionalityImage.svg"
+import funcationality3 from "../assets/images/functionalityImage.svg"
+
 export const caseStudies = [
   {
     id: 1,
     title: "",
     cardImg: case1,
-    mainImg: Project1,
+    mainImg: project1,
     shortDescription: "Description for case study 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu luctus lorem, in tempus mauris. Donec vulputate non neque placerat mattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu luctus lorem, in tempus mauris. Donec vulputate non neque placerat mattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu luctus lorem, in tempus mauris. Donec vulputate non neque placerat mattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum, ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu luctus lorem, in tempus mauris.",
@@ -37,7 +40,8 @@ export const caseStudies = [
     functionality:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
     technologies: [vue, node, mongo, docker],
-    background: "bg-red-800",
+    background: "bg-red-800"
+    ,functionalityImage:[funcationality1, project2, project3]
   },
   {
     id: 2,
@@ -50,7 +54,8 @@ export const caseStudies = [
     problems: ["problem 1", "problem 2", "problem 3", "problem 4"],
     functionality:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
-    technologies: [vue, node, mongo, docker],
+    technologies: [vue, node, mongo, docker]
+    ,functionalityImage:[funcationality1, project2, project3]
   },
   {
     id: 3,
@@ -64,6 +69,8 @@ export const caseStudies = [
     functionality:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
     technologies: [vue, node, mongo, docker],
+    functionalityImage:[funcationality1, project2, project3]
+
   },
   {
     id: 4,
@@ -77,6 +84,8 @@ export const caseStudies = [
     functionality:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
     technologies: [vue, node, mongo, docker],
+    functionalityImage:[funcationality1, project2, project3]
+
   },
   {
     id: 5,
@@ -90,6 +99,8 @@ export const caseStudies = [
     functionality:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
     technologies: [vue, node, mongo, docker],
+    functionalityImage:[funcationality1, project2, project3]
+
   },
   {
     id: 6,
@@ -103,5 +114,7 @@ export const caseStudies = [
     functionality:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
     technologies: [vue, node, mongo, docker],
+    functionalityImage:[funcationality1, project2, project3]
+
   },
 ];

@@ -6,11 +6,15 @@ import InvolvementCard from "@/components/InvolvementCard";
 import { involvementData } from "@/data/involvement";
 import { caseStudies } from "@/data/caseStudies";
 import TechsCard from "@/components/TechsCard";
+import RightArrowSvg from "@/components/RightArrowSvg.tsx/RightArrowSvg";
+import LeftSvgArrow from "@/components/SvgArrow/LeftSvgArrow";
+import { useState } from "react";
 interface CaseStudyDetailProps {
   params: any;
 }
 
 const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const router = useRouter();
   const { id } = params;
   const caseStudyId = parseInt(params.id, 10);
@@ -18,8 +22,26 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
     (caseStudy) => caseStudy.id === caseStudyId
   );
 
+   
+
+   
+  const handleNext = () => {
+    if (caseStudy?.functionalityImage) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex >= 2 ?  (prevIndex ) :(prevIndex+ 1));
+    }
+  };
+
+  const handlePrev = () => {
+    if (caseStudy?.functionalityImage) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? caseStudy.functionalityImage.length - 1 : prevIndex - 1
+      );
+    }
+  };
+  const images = caseStudy?.functionalityImage || [];
   return (
-    <div className="container mx-auto min-h-full relative">
+    <div className="container mx-auto min-h-full relative ">
       <div>
         <div className="absolute left-[14px] top-[40px] h-full border-l-2 border-[#0755E9]"></div>
         {/* Outer circle with inner circle */}
@@ -81,9 +103,41 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
         </div>
 
         {/* Core Functionality */}
-        <div>
+        <div className="my-36">
+          <div className="flex justify-between items-center mb-10 ">
+
           <h1 className="text-4xl font-bold">Core Functionality</h1>
+          <div className="sm:flex items-center gap-2 hidden">
+              
+              <button
+                onClick={handlePrev}
+                className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center   `}
+                disabled={currentIndex === 0}
+              >  
+                <LeftSvgArrow color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"} />
+              </button>
+
+              <button
+                onClick={handleNext}
+                className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center  `}
+
+              >
+              <RightArrowSvg color={currentIndex >= images.length - 1 ? "#1B232E" :"#D1D1D1" }/>
+              </button>
+            </div>
+          </div>
+          <div>
+            
+            <div className="transition duration-1000 ease-in-out ">
+              <Image
+              src={images[currentIndex]}  
+              alt={`Functionality Image ${currentIndex + 1}`}
+              className="w-full h-[540px] object-cover rounded-[12px] "
+              />
+            </div>
+          </div>
           <p className="my-4">{caseStudy?.functionality}</p>
+          
         </div>
 
         {/* Technologies Used */}
