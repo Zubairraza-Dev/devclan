@@ -1,21 +1,12 @@
-"use client"
-import React from 'react';
-import Player  from 'lottie-react';
+"use client";
+import React from "react";
+import Lottie from "lottie-react";
+import pencilAnimation from "./Pencil.json";
 
-
-interface PencilAnimationProps {
-    animationData? : any;
-}
-
-const PencilAnimation: React.FC<PencilAnimationProps> = ({ animationData }) => {
+const PencilAnimation = () => {
   return (
-    <div className="animation-container">
-      <Player
-        autoplay
-        loop
-        animationData={animationData}  // Use the passed animation data here
-        style={{ height: '300px', width: '300px' }}
-      />
+    <div className="mt-4">
+      <Lottie autoplay loop animationData={pencilAnimation} />
     </div>
   );
 };
