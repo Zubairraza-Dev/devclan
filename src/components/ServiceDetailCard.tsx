@@ -10,6 +10,7 @@ import circle1 from "../assets/icons/Ornament 2.svg"
 import circle2 from "../assets/icons/Ornament 3.svg"
 import circle3 from "../assets/icons/Ornament 4.svg"
 import CaseStudyCard from "./CaseStudyCard/CaseStudyCard";
+import UxDesignSvg from "./UxDesignSvg/UxDesignSvg";
 
 
 
@@ -24,7 +25,9 @@ interface ServiceDetailCardProp {
     serviceTitle?: string;
     detailServices? : any[];
     developmentPhase? : any[];
-    portfolio? : any[]
+    portfolio? : any[];
+    developmentProcess? : any[];
+
 }
 
 const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
@@ -36,14 +39,15 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
   detailServices,
   icons,
   developmentPhase,
-  portfolio
+  portfolio,
+  developmentProcess
 }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsToShow = 3;
   const containerRef = useRef<HTMLDivElement | null>(null);
   const selectedData =  portfolio?.slice(currentIndex, currentIndex + itemsToShow)
-
+  const [currentStep , setCurrentStep] = useState<number | null>(0)
   const handleNext = () => {
     if (
       containerRef.current &&
@@ -66,6 +70,10 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
       });
     }
   };
+
+  const handleClick = (i : any ) => {
+    setCurrentStep(i)
+  }
 
   return (
     <div className='sm:w-full w-[93%] mx-auto'>
@@ -129,6 +137,58 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
           </div>
         </div>
 
+        {/* Development phase of mobile and web development  */}
+        {
+          (title === "Web App Development" || title === "Mobile App Development Services") && (
+            <div className="mt-32 mb-44 flex flex-col gap-24">
+              <div className='tracking-tighter text-[48px] leading-[48px] font-bold'>
+                { (title === "Web App Development") ? "Web Development Process" : "Mobile Development Process"}
+              </div>
+              <div className="flex justify-between">
+                {
+                  developmentProcess?.map( (e, i) => (
+                    <div key={i} className={`h-[59px] px-5 tracking-tighter shadow-[0_1px_6px_rgba(0,0,0,0.5)]  font-semibold text-[16px] rounded-[10px]  flex flex-col box-border pt-2
+                      ${currentStep === i ? " bg-customBlue text-white " : " text-customDark bg-white bg-opacity-5"}`} 
+                    onClick={() => handleClick(i)}>
+                      <span className="text-[12px]">step {e.id}</span>
+                      {e.title} 
+                    </div>
+                    
+                  ))
+                }
+              </div>
+               
+              {currentStep !== null && developmentProcess?.[currentStep] && (
+              <div className="bg-customBlue h-[306px] w-[632px] rounded-[48px] mx-auto flex justify-center items-center shadow-2xl">
+
+                <div className="w-[96%] h-[93%] rounded-[48px] bg-white bg-opacity-10 flex justify-between items-center">
+                  <div className="flex mx-auto w-[96%] items-center h-full">
+                    <div className="bg-[#407CF0] rounded-[10px] w-[60px] h-[80px] "></div>
+                    <div className=" text-white p-4 h-[100%] rounded-[25px] mt-12 tracking-tighter flex flex-col gap-5">
+                      <Image src={developmentProcess[currentStep]?.image} alt="icons"/>
+                      <div className="text-[24px] font-semibold">
+                      {developmentProcess[currentStep]?.title}
+                      </div>
+                      <div className="text-[16px] ">
+                      {developmentProcess[currentStep]?.description}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              )}
+
+               
+            </div>
+          )
+        }
+
+        {/* ux design process */}
+        {
+          title === "Top UI/UX Design Services" && (
+            <UxDesignSvg/>
+          )
+        }
         {/* tools used  */}
         {
           title !== "Future Ready AI Development Services" && (
@@ -232,6 +292,8 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
         </div>
 
          </div>
+
+
         
     </div>
   )

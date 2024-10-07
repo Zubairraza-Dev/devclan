@@ -35,6 +35,7 @@ const ServiceDetail = ({ params }: ServiceDetailProps) => {
             icons={serviceDetails.icons}
             developmentPhase = {serviceDetails.developmentPhases}
             portfolio = {serviceDetails.portfolio}
+            developmentProcess = {serviceDetails.developmentProcess}
             />
     </div>
   );
