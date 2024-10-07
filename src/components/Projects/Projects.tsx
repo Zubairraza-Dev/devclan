@@ -87,8 +87,6 @@ const Projects = () => {
               className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center  `}
               disabled={currentIndex + itemsToShow >= caseStudies.length}
             >
-              {/* <RightSvgArrow color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"}/> */}
-              {/* <Image alt="arrow" src={RightVector}/> */}
             <RightArrowSvg color={currentIndex === 0 ? "#1B232E" :"#D1D1D1" }/>
             </button>
           </div>

@@ -11,6 +11,9 @@ import circle2 from "../assets/icons/Ornament 3.svg"
 import circle3 from "../assets/icons/Ornament 4.svg"
 import CaseStudyCard from "./CaseStudyCard/CaseStudyCard";
 import UxDesignSvg from "./UxDesignSvg/UxDesignSvg";
+import LeftSvgArrow from "../components/SvgArrow/LeftSvgArrow";
+import RightArrowSvg from "../components/RightArrowSvg.tsx/RightArrowSvg";
+
 
 
 
@@ -147,7 +150,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
               <div className="flex justify-between">
                 {
                   developmentProcess?.map( (e, i) => (
-                    <div key={i} className={`h-[59px] px-5 tracking-tighter shadow-[0_1px_6px_rgba(0,0,0,0.5)]  font-semibold text-[16px] rounded-[10px]  flex flex-col box-border pt-2
+                    <div key={i} className={`h-[59px] px-5 tracking-tighter shadow-[0_1px_6px_rgba(0,0,0,0.5)]  font-semibold text-[16px] rounded-[10px]  flex flex-col box-border pt-2 hover:cursor-pointer
                       ${currentStep === i ? " bg-customBlue text-white " : " text-customDark bg-white bg-opacity-5"}`} 
                     onClick={() => handleClick(i)}>
                       <span className="text-[12px]">step {e.id}</span>
@@ -158,12 +161,35 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
                 }
               </div>
                
-              {currentStep !== null && developmentProcess?.[currentStep] && (
+              {currentStep !== null && developmentProcess?.[currentStep] && title === "Mobile App Development Services" &&(
               <div className="bg-customBlue h-[306px] w-[632px] rounded-[48px] mx-auto flex justify-center items-center shadow-2xl">
 
                 <div className="w-[96%] h-[93%] rounded-[48px] bg-white bg-opacity-10 flex justify-between items-center">
                   <div className="flex mx-auto w-[96%] items-center h-full">
                     <div className="bg-[#407CF0] rounded-[10px] w-[60px] h-[80px] "></div>
+                    <div className=" text-white p-4 h-[100%] rounded-[25px] mt-12 tracking-tighter flex flex-col gap-5">
+                      <Image src={developmentProcess[currentStep]?.image} alt="icons"/>
+                      <div className="text-[24px] font-semibold">
+                      {developmentProcess[currentStep]?.title}
+                      </div>
+                      <div className="text-[16px] ">
+                      {developmentProcess[currentStep]?.description}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              )}
+               {currentStep !== null && developmentProcess?.[currentStep] && title === "Web App Development" &&(
+              <div className="bg-customBlue h-[410px] w-[640px] rounded-[16px] mx-auto flex   flex-col shadow-2xl gap-3">
+                <div className="flex gap-2 justify-start ml-4 mt-2">
+                <div className="bg-[#407CF0] rounded-full w-[12px] h-[12px] "></div>
+                <div className="bg-[#407CF0] rounded-full w-[12px] h-[12px] "></div>
+                <div className="bg-[#407CF0] rounded-full w-[12px] h-[12px] "></div>
+
+                </div>
+                <div className="  h-[85.5%] bg-white bg-opacity-10 flex justify-between items-center">
+                  <div className="flex mx-auto w-[99%] items-center h-[90%] flex-col">
                     <div className=" text-white p-4 h-[100%] rounded-[25px] mt-12 tracking-tighter flex flex-col gap-5">
                       <Image src={developmentProcess[currentStep]?.image} alt="icons"/>
                       <div className="text-[24px] font-semibold">
@@ -239,12 +265,15 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
          {/* portfolio section */}
          <div className="sm:container w-[93%] mx-auto py-8">
             <div className="flex items-center justify-between mb-4">
-              <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects</h1>
+              <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects </h1>
               <div className="sm:flex items-center gap-2  hidden">
                 <Link href="/case-studies">
-                  <button className="rounded-3xl border p-2">View All</button>
+                  {/* <button className="rounded-3xl border p-2">View All</button> */}
+                  <button className="rounded-3xl border p-2 w-24 h-12 hover:bg-[#0755E9] hover:text-white">
+                View All
+              </button>
                 </Link>
-                <button
+                {/* <button
                   onClick={handlePrev}
                   className={`rounded-full border h-10 w-10 hover:bg-blue-800 hover:text-white  ${
                     currentIndex === 0
@@ -265,7 +294,22 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
                   disabled={currentIndex + itemsToShow >= caseStudies.length}
                 >
                   &gt;
-                </button>
+                </button> */}
+                <button
+              onClick={handlePrev}
+              className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center   `}
+              disabled={currentIndex === 0}
+            >  
+              <LeftSvgArrow color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"} />
+            </button>
+
+            <button
+              onClick={handleNext}
+              className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center  `}
+              disabled={currentIndex + itemsToShow >= caseStudies.length}
+            >
+            <RightArrowSvg color={currentIndex === 0 ? "#1B232E" :"#D1D1D1" }/>
+            </button>
               </div>
             </div>
             <div
