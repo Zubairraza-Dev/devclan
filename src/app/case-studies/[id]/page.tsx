@@ -41,7 +41,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
   };
   const images = caseStudy?.functionalityImage || [];
   return (
-    <div className="container mx-auto min-h-full relative ">
+    <div className="container mx-auto h-full relative ">
       <div>
         <div className="absolute left-[14px] top-[40px] h-full border-l-2 border-[#0755E9]"></div>
         {/* Outer circle with inner circle */}
@@ -52,12 +52,12 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
         </div>
       </div>
 
-      <div className="ml-10">
+      <div className="ml-10 flex flex-col gap-10">
         {/* About Section */}
 
-        <h1 className="text-4xl font-bold ml-4">About</h1>
+        <h1 className="text-[24px] sm:text-4xl font-bold ml-4">About</h1>
 
-        <div className="my-4">
+        <div className="sm:my-4">
           <Image
             src={caseStudy?.mainImg}
             alt="redwave"
@@ -66,13 +66,13 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
           />
         </div>
 
-        <div className="my-4">
+        <div className="sm:my-4">
           <p>{caseStudy?.description}</p>
         </div>
 
         {/* Problem Statement */}
         <div>
-          <h1 className="text-4xl font-bold">Problem Statement</h1>
+          <h1 className="text-[24px] sm:text-4xl font-bold">Problem Statement</h1>
           <p className="my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit...
           </p>
@@ -87,7 +87,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
 
         {/* DevClan Involvement */}
         <div>
-          <h1 className="text-4xl font-bold">DevClan Involvement</h1>
+          <h1 className="text-[24px] sm:text-4xl font-bold">DevClan Involvement</h1>
           <p className="my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit...
           </p>
@@ -103,10 +103,10 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
         </div>
 
         {/* Core Functionality */}
-        <div className="my-36">
+        <div className="sm:my-36">
           <div className="flex justify-between items-center mb-10 ">
 
-          <h1 className="text-4xl font-bold">Core Functionality</h1>
+          <h1 className="text-[24px] sm:text-4xl font-bold">Core Functionality</h1>
           <div className="sm:flex items-center gap-2 hidden">
               
               <button
@@ -132,7 +132,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
               <Image
               src={images[currentIndex]}  
               alt={`Functionality Image ${currentIndex + 1}`}
-              className="w-full h-[540px] object-cover rounded-[12px] "
+              className="w-full h-[150px]  sm:h-[540px] object-cover rounded-[12px] "
               />
             </div>
           </div>
@@ -142,7 +142,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
 
         {/* Technologies Used */}
         <div>
-          <h1 className="text-4xl font-bold">Technologies Used</h1>
+          <h1 className="text-[24px] sm:text-4xl font-bold">Technologies Used</h1>
           <div className="flex gap-2 flex-wrap justify-between my-10">
             {caseStudy?.technologies?.map((technology) => (
               <TechsCard icon={technology} />
