@@ -82,12 +82,12 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
     <div className='sm:w-full w-[93%] mx-auto'>
 
       {/* hero section  */}
-        <div className="flex justify-between items-center w-full mb-36 mt-5">
-          <div className="text-customDark w-[40%] flex flex-col gap-8 h-[464px]">
-            <div className="text-[58px] tracking-tighter leading-[76px] font-bold">
+        <div className="flex justify-between items-center w-full sm:mb-36 mb-20 sm:mt-5 flex-wrap ">
+          <div className="text-customDark w-full sm:w-[40%] flex flex-col gap-4 sm:gap-8 h-auto sm:h-[464px]">
+            <div className="text-[24px] sm:text-[58px] tracking-tighter leading-[30px] sm:leading-[76px] font-bold">
             {title}
             </div>
-            <div className="text-[24px] leading-[36px] tracking-tighter">
+            <div className="text-[16px] sm:text-[24px] leading-[24px] sm:leading-[36px] tracking-tighter">
               {description}
             </div>
             
@@ -96,7 +96,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
                 detailPoints?.map( (e, i) => (
                   <div key={i} className='flex gap-4 items-center '>
                      <div className='bg-customBlue h-[10px] w-[10px] rounded-full'></div>
-                    <div className='tracking-tighter'>{e}</div>
+                    <div className='tracking-tighter sm:text-md text-sm '>{e}</div>
                   </div>
                 ))
               }
@@ -105,20 +105,20 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
             Get in Touch
             </div>
           </div>
-            <Image alt="ai image" src={image}  className='w-[40%]'/>
+            <Image alt="ai image" src={image}  className='w-full sm:w-[40%] sm:mt-0 mt-10'/>
         </div>
 
 
         {/* services section  */}
         <div>
-          <div className='tracking-tighter text-[48px] leading-[48px] font-bold'>
+          <div className='tracking-tighter sm:text-[48px] text-[24px] leading-[48px] font-bold'>
             {serviceTitle}
           </div>
-          <div className='flex flex-wrap 2xl:gap-20 xl:gap-12 sm:gap-10 text-customDark tracking-tighter mt-12'>
+          <div className='flex flex-wrap 2xl:gap-20 xl:gap-12 sm:gap-10 text-customDark tracking-tighter sm:mt-12 '>
             {
               detailServices?.map( (e) => (
-                <div key={e.id} className='sm:w-[424px] sm:h-[352px] relative group'>
-                   <div className='absolute right-0 left-0 mt-3 group-hover:scale-50 transition duration-700 ease-in-out origin-top-right'>
+                <div key={e.id} className='sm:w-[424px] sm:h-[352px] relative group sm:mt-0 mt-20'>
+                   <div className='absolute right-0 left-0 mt-3 sm:group-hover:scale-50 transition duration-700 ease-in-out origin-top-right scale-50 sm:scale-100'>
                     <Image src={circle1} alt='circle' className='absolute mx-auto left-48 right-0'/>
                     <Image src={circle2} alt='circle' className='absolute right-0'/>
                     <Image src={circle3} alt='circle' className='absolute right-0 mt-16'/>
@@ -143,18 +143,29 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
         {/* Development phase of mobile and web development  */}
         {
           (title === "Web App Development" || title === "Mobile App Development Services") && (
-            <div className="mt-32 mb-44 flex flex-col gap-24">
-              <div className='tracking-tighter text-[48px] leading-[48px] font-bold'>
+            <div className="sm:mt-32 my-12 sm:mb-44 flex flex-col gap-9 sm:gap-24 w-full relative overflow-hidden">
+              <div className='tracking-tighter text-[24px] sm:text-[48px] leading-[48px] font-bold'>
                 { (title === "Web App Development") ? "Web Development Process" : "Mobile Development Process"}
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between sm:gap-4 gap-20 scroll-smooth overflow-x-auto   hide-scrollbar w-full  p-3">
                 {
                   developmentProcess?.map( (e, i) => (
-                    <div key={i} className={`h-[59px] px-5 tracking-tighter shadow-[0_1px_6px_rgba(0,0,0,0.5)]  font-semibold text-[16px] rounded-[10px]  flex flex-col box-border pt-2 hover:cursor-pointer
+                    <div>
+                      <div className="w-full mb-6">
+                        <div className="h-[2px] w-full absolute bg-[#EEEEEE] mt-[11px]">
+                        </div>
+
+                        <div className={`w-[24px] h-[24px] flex justify-center items-center border rounded-full relative ${currentStep === i ? " border-customBlue" : " border-[#EEEEEE] "}`}>
+                          <div className={`w-[12px] h-[12px]${currentStep === i ? " bg-customBlue" : " bg-[#EEEEEE] "} rounded-full`}></div>
+                        </div>
+                      </div>
+
+                    <div key={i} className={`h-[59px] w-auto px-5 tracking-tighter  shadow-lg sm:shadow-[0_1px_6px_rgba(0,0,0,0.5)]  font-semibold text-[16px] rounded-[10px]  flex flex-col box-border pt-2 hover:cursor-pointer text-nowrap
                       ${currentStep === i ? " bg-customBlue text-white " : " text-customDark bg-white bg-opacity-5"}`} 
                     onClick={() => handleClick(i)}>
                       <span className="text-[12px]">step {e.id}</span>
                       {e.title} 
+                    </div>
                     </div>
                     
                   ))
@@ -162,17 +173,17 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
               </div>
                
               {currentStep !== null && developmentProcess?.[currentStep] && title === "Mobile App Development Services" &&(
-              <div className="bg-customBlue h-[306px] w-[632px] rounded-[48px] mx-auto flex justify-center items-center shadow-2xl">
+              <div className="bg-customBlue h-auto sm:h-[306px] w-full sm:w-[632px] rounded-[30px] sm:rounded-[48px] mx-auto flex justify-center items-center shadow-2xl sm:py-0 py-2">
 
-                <div className="w-[96%] h-[93%] rounded-[48px] bg-white bg-opacity-10 flex justify-between items-center">
+                <div className="w-[96%] h-[93%] rounded-[30px] sm:rounded-[48px] bg-white bg-opacity-10 flex justify-between items-center sm:py-0 py-2">
                   <div className="flex mx-auto w-[96%] items-center h-full">
-                    <div className="bg-[#407CF0] rounded-[10px] w-[60px] h-[80px] "></div>
-                    <div className=" text-white p-4 h-[100%] rounded-[25px] mt-12 tracking-tighter flex flex-col gap-5">
+                    <div className="bg-[#407CF0] rounded-[10px] w-[60px] sm:h-[80px] h-[60px] "></div>
+                    <div className=" text-white p-4 h-[100%] rounded-[25px] sm:mt-12 tracking-tighter flex flex-col gap-1 sm:gap-5">
                       <Image src={developmentProcess[currentStep]?.image} alt="icons"/>
-                      <div className="text-[24px] font-semibold">
+                      <div className="text-[16px] sm:text-[24px] font-semibold">
                       {developmentProcess[currentStep]?.title}
                       </div>
-                      <div className="text-[16px] ">
+                      <div className="text-[12px] sm:text-[16px] ">
                       {developmentProcess[currentStep]?.description}
                       </div>
                     </div>
@@ -181,21 +192,21 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
                </div>
               )}
                {currentStep !== null && developmentProcess?.[currentStep] && title === "Web App Development" &&(
-              <div className="bg-customBlue h-[410px] w-[640px] rounded-[16px] mx-auto flex   flex-col shadow-2xl gap-3">
-                <div className="flex gap-2 justify-start ml-4 mt-2">
-                <div className="bg-[#407CF0] rounded-full w-[12px] h-[12px] "></div>
-                <div className="bg-[#407CF0] rounded-full w-[12px] h-[12px] "></div>
-                <div className="bg-[#407CF0] rounded-full w-[12px] h-[12px] "></div>
+              <div className="bg-customBlue h-auto sm:h-[410px] w-full sm:w-[640px] rounded-[16px] mx-auto flex  flex-col shadow-2xl  gap-1 sm:gap-3 sm:pb-0 pb-3">
+                <div className="flex gap-2 justify-start ml-4 mt-1 sm:mt-2">
+                <div className="bg-[#407CF0] rounded-full w-[7px] h-[7px] sm:w-[12px] sm:h-[12px] "></div>
+                <div className="bg-[#407CF0] rounded-full w-[7px] h-[7px] sm:w-[12px] sm:h-[12px] "></div>
+                <div className="bg-[#407CF0] rounded-full w-[7px] h-[7px] sm:w-[12px] sm:h-[12px] "></div>
 
                 </div>
-                <div className="  h-[85.5%] bg-white bg-opacity-10 flex justify-between items-center">
+                <div className="  h-[85.5%] bg-white sm:py-0 py-5 bg-opacity-10 flex justify-between items-center">
                   <div className="flex mx-auto w-[99%] items-center h-[90%] flex-col">
-                    <div className=" text-white p-4 h-[100%] rounded-[25px] mt-12 tracking-tighter flex flex-col gap-5">
+                    <div className=" text-white p-4 h-[100%] rounded-[25px] sm:mt-12 tracking-tighter flex flex-col gap-1.5 sm:gap-5">
                       <Image src={developmentProcess[currentStep]?.image} alt="icons"/>
-                      <div className="text-[24px] font-semibold">
+                      <div className="text-[16px] sm:text-[24px] font-semibold">
                       {developmentProcess[currentStep]?.title}
                       </div>
-                      <div className="text-[16px] ">
+                      <div className="text-[12px] sm:text-[16px] ">
                       {developmentProcess[currentStep]?.description}
                       </div>
                     </div>
@@ -218,12 +229,12 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
         {/* tools used  */}
         {
           title !== "Future Ready AI Development Services" && (
-            <div className='my-24'>
-          <div className='tracking-tighter text-[48px] leading-[48px] font-bold'> Tools Used </div>
-          <div className='w-full flex justify-between items-center my-14'>
+            <div className='my-12 sm:my-24'>
+          <div className='tracking-tighter sm:text-[48px]  text-[24px] leading-[48px] font-bold'> Tools Used </div>
+          <div className='w-full flex justify-between items-center my-8 sm:my-14 flex-wrap'>
             {
               icons?.map( (e) => (
-                <div className='shadow-[0_4px_15px_rgba(0,0,0,0.5)] flex justify-center items-center w-[23%] h-[174px] rounded-[10px]'>
+                <div className='sm:shadow-[0_4px_15px_rgba(0,0,0,0.5)] shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex justify-center items-center w-[48%] sm:w-[23%] h-[174px] rounded-[10px] sm:mt-0 mt-5'>
                   <Image alt='tools image' src={e}/>
                 </div>
               ))
@@ -236,22 +247,22 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
         {/* ai development phase  */}
          {
           title === "Future Ready AI Development Services" && (
-            <div className='my-36'>
-            <div className='tracking-tighter text-[48px] leading-[48px] font-bold'> AI Development Phases </div>
+            <div className='my-20 sm:my-36'>
+            <div className='tracking-tighter text-[24px] sm:text-[48px] leading-[48px] font-bold'> AI Development Phases </div>
               <div className='flex flex-wrap justify-between mt-16'>
             {developmentPhase?.map((e) => (
               <div
                 key={e.id}
-                className={`bg-[#D6D6D640] bg-opacity-25 rounded-[30px] h-[322px] mt-5 ${(e.id === 2 || e.id === 3) ? 'w-[60%]' : 'w-[38%]'}`}
+                className={`bg-[#D6D6D640] bg-opacity-25 rounded-[30px] h-auto sm:h-[322px] sm:py-0 py-7 mt-5 ${(e.id === 2 || e.id === 3) ? 'sm:w-[60%] w-full' : 'w-full sm:w-[38%]'}`}
               >
-                 <div className='w-[93%] mx-auto  flex gap-4 flex-col h-full justify-center tracking-tighter'>
+                 <div className='w-[93%] mx-auto  flex sm:gap-4 gap-2 flex-col h-full justify-center tracking-tighter'>
                  <div className='text-[16px] leading-[34px]'>
                         {e.smallHeading}
                       </div>
                       <div className='text-[24px] font-bold text-customBlue'>
                         {e.title}
                       </div>
-                      <div className='text-[16px] leading-[34px]'>
+                      <div className='text-[16px] leading-[22px] sm:leading-[34px]'>
                         {e.description}
                       </div>
                   </div>
@@ -263,7 +274,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
          }
 
          {/* portfolio section */}
-         <div className="sm:container w-[93%] mx-auto py-8">
+         <div className="sm:container w-[93%] mx-auto pt-8 ">
             <div className="flex items-center justify-between mb-4">
               <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects </h1>
               <div className="sm:flex items-center gap-2  hidden">

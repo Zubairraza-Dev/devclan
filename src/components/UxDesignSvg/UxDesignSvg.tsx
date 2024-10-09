@@ -2,8 +2,8 @@ import React from 'react'
 
 const UxDesignSvg = () => {
   return (
-    <div className='container mx-auto my-32 flex flex-col gap-24'>
-      <div className="text-[#1F1F1F]  font-bold sm:text-[58px] text-[24px] sm:text-start text-center ">
+    <div className='sm:container w-full mx-auto my-12 sm:my-32 flex flex-col gap-12 sm:gap-24'>
+      <div className="text-[#1F1F1F]  font-bold sm:text-[58px] text-[24px] sm:text-start text-start sm:text-center ">
           Development Journey
         </div>
         <svg width="100%" height="auto" viewBox="0 0 1429 568" fill="none" xmlns="http://www.w3.org/2000/svg">
