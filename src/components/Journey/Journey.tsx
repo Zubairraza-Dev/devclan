@@ -1,20 +1,26 @@
 import Image from "next/image";
-import pencil1 from "../../assets/images/pencil1.svg";
-import pencil2 from "../../assets/images/pencil2.svg";
-import pencil3 from "../../assets/images/pencil3.svg";
-import pencil4 from "../../assets/images/pencil4.svg";
-import pencil5 from "../../assets/images/pencil5.svg";
-import smallPencil from "../../assets/images/mobilePencil.svg";
-import DevelopmentJourneyIcon from "./DevelopmentJourneyIcon";
 import PencilAnimation from "../PencilAnimationJson/PencilAnimation";
+import pencil from "@/assets/images/pencil.svg";
+import { development } from "@/data/development";
 
 const Journey = () => {
   return (
-    <div className="container mx-auto my-32">
-      <div className="text-[#1F1F1F]  font-bold sm:text-[58px] text-[24px] sm:text-start text-center ">
+    <div className="w-[93%] sm:container mx-auto my-8">
+      <div className="text-[#1F1F1F]  font-bold sm:text-[58px] text-[24px] mb-4">
         Development Journey
       </div>
       <PencilAnimation />
+      <div className="flex flex-col items-center justify-center gap-4 md:hidden ">
+        <Image src={pencil} alt="pencil" />
+        <div className="flex flex-col items-center justify-center gap-4">
+          {development.map((item) => (
+            <div key={item.id} className="bg-[#FAFAFA] p-4 rounded-lg  ">
+              <h1 className="text-[20px] font-bold">{item.heading}</h1>
+              <p>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
     // <div className="bg-white  py-8 sm:container w-[93%] mx-auto overflow-hidden">
     //   <div className="sm:text-4xl text-[24px] font-bold mb-6 sm:text-start text-center"> Development Journey</div>
