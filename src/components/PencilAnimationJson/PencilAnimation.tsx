@@ -5,7 +5,7 @@ import pencilAnimation from "./Pencil.json";
 
 const PencilAnimation = () => {
   return (
-    <div className="mt-4">
+    <div className="mt-4 hidden md:block">
       <Lottie autoplay loop animationData={pencilAnimation} />
     </div>
   );

@@ -4,12 +4,12 @@ import { useState, useRef } from "react";
 import { caseStudies } from "@/data/caseStudies";
 import CaseStudyCard from "../CaseStudyCard/CaseStudyCard";
 import Link from "next/link";
-import leftArrow from "../../assets/icons/leftArrow.svg"
-import rightArrow from "../../assets/icons/rightArrow.svg"
+import leftArrow from "../../assets/icons/leftArrow.svg";
+import rightArrow from "../../assets/icons/rightArrow.svg";
 import Image from "next/image";
 // import RightSvgArrow from "../SvgArrow/LeftSvgArrow";
 import LeftSvgArrow from "../SvgArrow/LeftSvgArrow";
-import RightVector from "../../assets/icons/rightVector.svg"
+import RightVector from "../../assets/icons/rightVector.svg";
 import RightArrowSvg from "../RightArrowSvg.tsx/RightArrowSvg";
 
 const Projects = () => {
@@ -62,7 +62,7 @@ const Projects = () => {
             >
               &lt;
             </button> */}
-             {/* <button
+            {/* <button
               onClick={handleNext}
               className={`rounded-full border h-10 w-10 hover:bg-[#0755E9] hover:text-white ${
                 currentIndex + itemsToShow >= caseStudies.length
@@ -78,8 +78,10 @@ const Projects = () => {
               onClick={handlePrev}
               className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center   `}
               disabled={currentIndex === 0}
-            >  
-              <LeftSvgArrow color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"} />
+            >
+              <LeftSvgArrow
+                color={currentIndex === 0 ? "#D1D1D1" : "#1B232E"}
+              />
             </button>
 
             <button
@@ -87,7 +89,9 @@ const Projects = () => {
               className={`rounded-full border h-[50px] w-[50px] hover:bg-[#0755E9] hover:text-white flex justify-center items-center  `}
               disabled={currentIndex + itemsToShow >= caseStudies.length}
             >
-            <RightArrowSvg color={currentIndex === 0 ? "#1B232E" :"#D1D1D1" }/>
+              <RightArrowSvg
+                color={currentIndex === 0 ? "#1B232E" : "#D1D1D1"}
+              />
             </button>
           </div>
         </div>
@@ -96,19 +100,18 @@ const Projects = () => {
           className="flex gap-4 overflow-x-auto scroll-smooth hide-scrollbar"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {caseStudies
-            .slice(currentIndex, currentIndex + itemsToShow)
-            .map((caseStudy) => (
-              <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
-                <CaseStudyCard
-                  title={caseStudy.title}
-                  description={caseStudy.shortDescription}
-                  image={caseStudy.cardImg}
-                  background={caseStudy.background}
-                  // className="scroll-snap-start"
-                />
-              </Link>
-            ))}
+          {/* .slice(currentIndex, currentIndex + itemsToShow) */}
+          {caseStudies.map((caseStudy) => (
+            <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
+              <CaseStudyCard
+                title={caseStudy.title}
+                description={caseStudy.shortDescription}
+                image={caseStudy.cardImg}
+                background={caseStudy.background}
+                // className="scroll-snap-start"
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </div>

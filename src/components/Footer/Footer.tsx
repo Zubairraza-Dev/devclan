@@ -2,9 +2,9 @@ import Contact from "../Contact/Contact";
 
 const Footer = () => {
   return (
-    <div className="md:mt-80 mt-[570px]">
+    <div className="md:mt-80 mt-[350px]">
       <Contact />
-      <footer className="bg-custom-gradient text-white py-8 sm:h-[754px] flex  justify-end items-end sm:mt-0  pt-[540px]">
+      <footer className="bg-custom-gradient text-white py-8 sm:h-[754px] flex  justify-end items-end sm:mt-0  pt-[370px] lg:pt-[540px]">
         <div className="sm:container w-[93%]  mx-auto flex flex-col gap-14">
           <div className=" ">
             <img
@@ -26,9 +26,15 @@ const Footer = () => {
                   </h1>
                   <div className="flex flex-col gap-2">
                     <p className="sm:text-md text-sm text-[#D1D1D1]">About</p>
-                    <p className="sm:text-md text-sm text-[#D1D1D1]">Serivce </p>
-                    <p className="sm:text-md text-sm text-[#D1D1D1]">Technology</p>
-                    <p className="sm:text-md text-sm text-[#D1D1D1]">Case Studies</p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">
+                      Serivce{" "}
+                    </p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">
+                      Technology
+                    </p>
+                    <p className="sm:text-md text-sm text-[#D1D1D1]">
+                      Case Studies
+                    </p>
                     <p className="sm:text-md text-sm text-[#D1D1D1]">Team</p>
                   </div>
                 </div>
