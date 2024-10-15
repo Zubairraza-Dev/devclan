@@ -51,10 +51,11 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const selectedData =  portfolio?.slice(currentIndex, currentIndex + itemsToShow)
   const [currentStep , setCurrentStep] = useState<number | null>(0)
+
   const handleNext = () => {
     if (
-      containerRef.current &&
-      currentIndex + itemsToShow < caseStudies.length
+      containerRef.current  && portfolio?.length &&
+      currentIndex + itemsToShow < portfolio?.length
     ) {
       setCurrentIndex((prev) => prev + itemsToShow);
       containerRef.current.scrollBy({
@@ -64,6 +65,21 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
     }
   };
 
+  // const handleNext = () => {
+  //   if (containerRef.current) {
+  //     const maxIndex = caseStudies.length - itemsToShow;
+      
+  //     if (currentIndex < maxIndex) {
+  //       setCurrentIndex((prev) => Math.min(prev + itemsToShow, maxIndex));
+        
+  //       containerRef.current.scrollBy({
+  //         left: containerRef.current.offsetWidth,
+  //         behavior: "smooth",
+  //       });
+  //     }
+  //   }
+  // };
+  
   const handlePrev = () => {
     if (containerRef.current && currentIndex - itemsToShow >= 0) {
       setCurrentIndex((prev) => prev - itemsToShow);
@@ -83,7 +99,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
 
       {/* hero section  */}
         <div className="flex justify-between items-center w-full sm:mb-36 mb-20 sm:mt-5 flex-wrap ">
-          <div className="text-customDark w-full sm:w-[40%] flex flex-col gap-4 sm:gap-8 h-auto sm:h-[464px]">
+          <div className="text-customDark w-full lg:w-[40%] flex flex-col gap-4 sm:gap-8 h-auto ">
             <div className="text-[24px] sm:text-[58px] tracking-tighter leading-[30px] sm:leading-[76px] font-bold">
             {title}
             </div>
@@ -105,7 +121,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
             Get in Touch
             </div>
           </div>
-            <Image alt="ai image" src={image}  className='w-full sm:w-[40%] sm:mt-0 mt-10'/>
+            <Image alt="ai image" src={image}  className='w-full lg:w-[40%] sm:mt-0 mt-10'/>
         </div>
 
 
@@ -247,13 +263,13 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
         {/* ai development phase  */}
          {
           title === "Future Ready AI Development Services" && (
-            <div className='my-20 sm:my-36'>
-            <div className='tracking-tighter text-[24px] sm:text-[48px] leading-[48px] font-bold'> AI Development Phases </div>
-              <div className='flex flex-wrap justify-between mt-16'>
+            <div className=' my-14 lg:my-36'>
+            <div className='tracking-tighter text-[24px] sm:text-[48px] leading-[48px] font-bold '> AI Development Phases </div>
+              <div className='flex flex-wrap justify-between sm:mt-16 mt-8'>
             {developmentPhase?.map((e) => (
               <div
                 key={e.id}
-                className={`bg-[#D6D6D640] bg-opacity-25 rounded-[30px] h-auto sm:h-[322px] sm:py-0 py-7 mt-5 ${(e.id === 2 || e.id === 3) ? 'sm:w-[60%] w-full' : 'w-full sm:w-[38%]'}`}
+                className={`bg-[#D6D6D640] bg-opacity-25 rounded-[30px] h-auto sm:h-[322px] sm:py-0 py-7 mt-5 ${(e.id === 2 || e.id === 3) ? 'lg:w-[60%] w-full' : 'w-full lg:w-[38%]'}`}
               >
                  <div className='w-[93%] mx-auto  flex sm:gap-4 gap-2 flex-col h-full justify-center tracking-tighter'>
                  <div className='text-[16px] leading-[34px]'>
@@ -274,7 +290,7 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
          }
 
          {/* portfolio section */}
-         <div className="sm:container w-[93%] mx-auto pt-8 ">
+         <div className="sm:container w-full mx-auto pt-8 ">
             <div className="flex items-center justify-between mb-4">
               <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects </h1>
               <div className="sm:flex items-center gap-2  hidden">
@@ -329,8 +345,8 @@ const ServiceDetailCard : React.FC<ServiceDetailCardProp> = ({
           style={{ scrollSnapType: "x mandatory" }}
         >
           {
-          portfolio?.slice(currentIndex, currentIndex + itemsToShow)
-            .map((e) => (
+          // portfolio?.slice(currentIndex, currentIndex + itemsToShow)
+            selectedData?.map((e) => (
               <div key={e.id} className='w-full'>
                 <CaseStudyCard 
                  title={e.title}
