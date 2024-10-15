@@ -34,7 +34,7 @@ const CaseStudiesPage = () => {
       {/* explore section */}
       <div className="sm:container w-[93%] mx-auto py-8 bg-white">
         <h1 className="text-3xl font-bold mb-6">Explore Our Work</h1>
-        <div className="flex items-center justify-between flex-wrap gap-x-2 gap-y-4">
+        <div className="flex items-center justify-center md:justify-between flex-wrap gap-x-2 gap-y-4">
           {caseStudies.map((caseStudy) => (
             <Link key={caseStudy.id} href={`/case-studies/${caseStudy.id}`}>
               {/* No need to wrap with <a> */}
