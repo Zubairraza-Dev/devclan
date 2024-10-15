@@ -1,15 +1,43 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const handleScrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (path: string, sectionId: string) => {
+    setIsSidebarOpen(false);
+    if (sectionId === "contact-us") {
+      handleScrollToSection(sectionId);
+    } else if (pathname === "/") {
+      handleScrollToSection(sectionId);
+    } else {
+      router.push(`/?section=${sectionId}`);
+    }
+  };
+
+  useEffect(() => {
+    const scrollTo = searchParams.get("section");
+    if (scrollTo) {
+      handleScrollToSection(scrollTo);
+    }
+  }, [searchParams]);
 
   return (
     <>
@@ -20,17 +48,23 @@ const Navbar = () => {
             <img
               src="/icons/navLogo.svg"
               alt="logo"
-              // className="sm:w-auto sm:h-auto h-[24px] w-[26px]"
+              className="w-auto h-auto"
             />
           </Link>
           <ul className="hidden md:flex items-center space-x-6">
             <li>
-              <a href="#" className="hover:text-[#0755E9]">
+              <a
+                onClick={() => handleNavClick("/", "services")}
+                className="hover:text-[#0755E9] cursor-pointer"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#0755E9]">
+              <a
+                onClick={() => handleNavClick("/", "technologies")}
+                className="hover:text-[#0755E9] cursor-pointer"
+              >
                 Technologies
               </a>
             </li>
@@ -44,10 +78,11 @@ const Navbar = () => {
                 Team
               </a>
             </li>
-            <li className="rounded-lg p-2 bg-[#0755E9] flex justify-center text-white">
-              <a href="#" className="hover:text-[#1B232E]">
-                Contact Us
-              </a>
+            <li
+              onClick={() => handleNavClick("/", "contact-us")}
+              className="rounded-lg p-2 bg-[#0755E9] flex justify-center text-white cursor-pointer"
+            >
+              <a className="hover:text-[#1B232E]">Contact Us</a>
             </li>
           </ul>
 
@@ -79,12 +114,18 @@ const Navbar = () => {
         {/* Sidebar Links */}
         <ul className="flex flex-col space-y-6 pl-6 pt-6">
           <li>
-            <a href="#" className="text-[#1B232E] text-xl hover:text-[#0755E9]">
+            <a
+              onClick={() => handleNavClick("/", "services")}
+              className="text-[#1B232E] text-xl hover:text-[#0755E9]"
+            >
               Services
             </a>
           </li>
           <li>
-            <a href="#" className="text-[#1B232E] text-xl hover:text-[#0755E9]">
+            <a
+              onClick={() => handleNavClick("/", "technologies")}
+              className="text-[#1B232E] text-xl hover:text-[#0755E9]"
+            >
               Technologies
             </a>
           </li>
@@ -105,7 +146,10 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="text-[#1B232E] text-xl hover:text-[#0755E9]">
+            <a
+              onClick={() => handleNavClick("/", "contact-us")}
+              className="text-[#1B232E] text-xl hover:text-[#0755E9]"
+            >
               Contact Us
             </a>
           </li>

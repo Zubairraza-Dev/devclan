@@ -6,8 +6,8 @@ import InvolvementCard from "@/components/InvolvementCard";
 import { involvementData } from "@/data/involvement";
 import { caseStudies } from "@/data/caseStudies";
 import TechsCard from "@/components/TechsCard";
-import RightArrowSvg from "@/components/RightArrowSvg.tsx/RightArrowSvg";
-import LeftSvgArrow from "@/components/SvgArrow/LeftSvgArrow";
+import RightArrowSvg from "@/components/SvgComponents/RightArrowSvg";
+import LeftSvgArrow from "@/components/SvgComponents/LeftArrowSvg";
 import { useState } from "react";
 interface CaseStudyDetailProps {
   params: any;
