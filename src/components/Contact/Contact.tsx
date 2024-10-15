@@ -52,7 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <div className=" mx-auto py-8 px-6 border border-[#0755E9]  h-auto sm:h-[570px] w-[93%] sm:w-[77%] rounded-2xl text-white bg-white sm:-mt-[300px] -mt-[280px] absolute left-0 right-0 items-center md:block ">
+    <div
+      id="contact-us"
+      className=" mx-auto py-8 px-6 border border-[#0755E9]  h-auto sm:h-[570px] w-[93%] sm:w-[77%] rounded-2xl text-white bg-white sm:-mt-[300px] -mt-[280px] absolute left-0 right-0 items-center md:block "
+    >
       <div className="flex justify-between gap-3 flex-wrap ">
         <div className="w-full sm:w-[34%] h-auto  sm:h-[508px] rounded-[20px] bg-[#EEEEEE] text-black hidden lg:block ">
           <div className="w-[65%] sm:w-[87%] mx-auto flex flex-col gap-3 mt-5 sm:py-0 pb-6">

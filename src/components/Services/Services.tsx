@@ -36,7 +36,7 @@ const Services = () => {
   }, [services]); // Added `services` as a dependency
 
   return (
-    <div className="bg-white text-white py-8">
+    <div id="services" className="bg-white text-white py-8">
       <div className="container mx-auto">
         <div className="text-[#1F1F1F]  font-bold sm:text-[58px] text-[24px] sm:text-start text-center ">
           Our services

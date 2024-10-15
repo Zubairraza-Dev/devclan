@@ -1,16 +1,11 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { caseStudies } from "@/data/caseStudies";
-import CaseStudyCard from "../CaseStudyCard/CaseStudyCard";
 import Link from "next/link";
-import leftArrow from "../../assets/icons/leftArrow.svg";
-import rightArrow from "../../assets/icons/rightArrow.svg";
-import Image from "next/image";
-// import RightSvgArrow from "../SvgArrow/LeftSvgArrow";
-import LeftSvgArrow from "../SvgArrow/LeftSvgArrow";
-import RightVector from "../../assets/icons/rightVector.svg";
-import RightArrowSvg from "../RightArrowSvg.tsx/RightArrowSvg";
+import { caseStudies } from "@/data/caseStudies";
+import CaseStudyCard from "@/components/CaseStudyCard/CaseStudyCard";
+import LeftSvgArrow from "@/components/SvgComponents/LeftArrowSvg";
+import RightArrowSvg from "@/components/SvgComponents/RightArrowSvg";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
