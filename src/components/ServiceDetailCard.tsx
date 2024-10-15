@@ -49,10 +49,12 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
     currentIndex + itemsToShow
   );
   const [currentStep, setCurrentStep] = useState<number | null>(0);
+
   const handleNext = () => {
     if (
       containerRef.current &&
-      currentIndex + itemsToShow < caseStudies.length
+      portfolio?.length &&
+      currentIndex + itemsToShow < portfolio?.length
     ) {
       setCurrentIndex((prev) => prev + itemsToShow);
       containerRef.current.scrollBy({
@@ -61,6 +63,21 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
       });
     }
   };
+
+  // const handleNext = () => {
+  //   if (containerRef.current) {
+  //     const maxIndex = caseStudies.length - itemsToShow;
+
+  //     if (currentIndex < maxIndex) {
+  //       setCurrentIndex((prev) => Math.min(prev + itemsToShow, maxIndex));
+
+  //       containerRef.current.scrollBy({
+  //         left: containerRef.current.offsetWidth,
+  //         behavior: "smooth",
+  //       });
+  //     }
+  //   }
+  // };
 
   const handlePrev = () => {
     if (containerRef.current && currentIndex - itemsToShow >= 0) {
@@ -80,7 +97,7 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
     <div className="sm:w-full w-[93%] mx-auto">
       {/* hero section  */}
       <div className="flex justify-between items-center w-full sm:mb-36 mb-20 sm:mt-5 flex-wrap ">
-        <div className="text-customDark w-full sm:w-[40%] flex flex-col gap-4 sm:gap-8 h-auto sm:h-[464px]">
+        <div className="text-customDark w-full lg:w-[40%] flex flex-col gap-4 sm:gap-8 h-auto ">
           <div className="text-[24px] sm:text-[58px] tracking-tighter leading-[30px] sm:leading-[76px] font-bold">
             {title}
           </div>
@@ -99,6 +116,11 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
           <div className="w-[141px] sm:h-[60px] h-[50px] tracking-tighter sm:rounded-[10px] rounded-[8px] bg-customBlue flex justify-center text-white font-bold text-[16px] items-center ">
             Get in Touch
           </div>
+          <Image
+            alt="ai image"
+            src={image}
+            className="w-full lg:w-[40%] sm:mt-0 mt-10"
+          />
         </div>
         <Image
           alt="ai image"
@@ -269,19 +291,19 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
 
       {/* ai development phase  */}
       {title === "Future Ready AI Development Services" && (
-        <div className="my-20 sm:my-36">
-          <div className="tracking-tighter text-[24px] sm:text-[48px] leading-[48px] font-bold">
+        <div className=" my-14 lg:my-36">
+          <div className="tracking-tighter text-[24px] sm:text-[48px] leading-[48px] font-bold ">
             {" "}
             AI Development Phases{" "}
           </div>
-          <div className="flex flex-wrap justify-between mt-16">
+          <div className="flex flex-wrap justify-between sm:mt-16 mt-8">
             {developmentPhase?.map((e) => (
               <div
                 key={e.id}
                 className={`bg-[#D6D6D640] bg-opacity-25 rounded-[30px] h-auto sm:h-[322px] sm:py-0 py-7 mt-5 ${
                   e.id === 2 || e.id === 3
-                    ? "sm:w-[60%] w-full"
-                    : "w-full sm:w-[38%]"
+                    ? "lg:w-[60%] w-full"
+                    : "w-full lg:w-[38%]"
                 }`}
               >
                 <div className="w-[93%] mx-auto  flex sm:gap-4 gap-2 flex-col h-full justify-center tracking-tighter">
@@ -302,7 +324,7 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
       )}
 
       {/* portfolio section */}
-      <div className="sm:container w-[93%] mx-auto pt-8 ">
+      <div className="sm:container w-full mx-auto pt-8 ">
         <div className="flex items-center justify-between mb-4">
           <h1 className="sm:text-4xl text-[24px] font-bold">Our Projects </h1>
           <div className="sm:flex items-center gap-2  hidden">
@@ -360,9 +382,9 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
           className="flex gap-4 overflow-x-auto scroll-smooth hide-scrollbar"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {portfolio
-            ?.slice(currentIndex, currentIndex + itemsToShow)
-            .map((e) => (
+          {
+            // portfolio?.slice(currentIndex, currentIndex + itemsToShow)
+            selectedData?.map((e) => (
               <div key={e.id} className="w-full">
                 <CaseStudyCard
                   title={e.title}
@@ -371,7 +393,8 @@ const ServiceDetailCard: React.FC<ServiceDetailCardProp> = ({
                   background={e.background}
                 />
               </div>
-            ))}
+            ))
+          }
         </div>
       </div>
     </div>
