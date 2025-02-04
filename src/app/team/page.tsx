@@ -13,14 +13,17 @@ const Team = () => {
               alt={`${employee.name} image`}
               height={180}
               width={180}
+              style={{ borderRadius: 90 }}
             />
             <p
               style={{ textAlign: "center" }}
               className="mt-4 text-lg font-semibold"
             >
+              {employee.name}
+            </p>
+            <p style={{ textAlign: "center" }} className="text-gray-600">
               {employee.position}
             </p>
-            <p className="text-gray-600">{employee.name}</p>
           </div>
         ))}
       </div>

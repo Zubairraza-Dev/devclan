@@ -77,9 +77,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
           <h1 className="text-[24px] sm:text-4xl font-bold">
             Problem Statement
           </h1>
-          <p className="my-2 lg:my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-          </p>
+          <p className="my-2 lg:my-4">The problems we aimed to solve :</p>
           <ul className="list-disc marker:text-[#0755E9] marker:text-2xl pl-5">
             {caseStudy?.problems?.map((technology, index) => (
               <li key={index} className="mb-1">
@@ -95,7 +93,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ params }) => {
             DevClan Involvement
           </h1>
           <p className="my-2 lg:my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            Services we provided for the completion of this product :
           </p>
           <div className="flex gap-2 flex-wrap justify-between my-3 lg:my-10">
             {involvementData?.map((involvement) => (

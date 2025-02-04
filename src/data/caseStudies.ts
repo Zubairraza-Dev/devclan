@@ -22,7 +22,7 @@ import project4 from "../assets/images/project4.svg";
 import project5 from "../assets/images/project5.svg";
 import project6 from "../assets/images/project6.svg";
 import project7 from "../assets/images/project7.svg";
-
+import project8 from "../assets/images/Hejaz.png";
 import funcationality1 from "../assets/images/functionalityImage.svg";
 import funcationality2 from "../assets/images/functionalityImage.svg";
 import funcationality3 from "../assets/images/functionalityImage.svg";
@@ -156,5 +156,24 @@ export const caseStudies = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum uctus lorem, in tempus mauris. Donec vulputate non neque placeratmattis. Donec eleifend tempor luctus. Fusce consequat erat ut iaculis luctus. Praesent sodales in velit sed fringilla. Nam turpis ipsum,ultrices vel efficitur vitae, sodales luctus augue. Mauris ornare, ipsum ac convallis interdum, lacus leo finibus urna, ut fermentum ipsum neque eu nunc",
     technologies: [vue, node, mongo, docker],
     functionalityImage: [project7, project2, project3],
+  },
+  {
+    id: 8,
+    title: "Case Study 7",
+    cardImg: project8,
+    mainImg: project8,
+    shortDescription:
+      "Hejaz Financial Services is an Australian financial institution specializing in providing Shariah-compliant financial products and services to the Muslim community.",
+    description:
+      "Hejaz Financial Services is an Australian financial institution specializing in providing Shariah-compliant financial products and services to the Muslim community. Their offerings include Islamic superannuation, halal home financing, investment opportunities, and protection plans, all designed to align with Islamic principles",
+    problems: [
+      "Lack of Shariah-Compliant Financial Products",
+      "Complexity in Managing Finances According to Faith",
+      "Limited Access to Ethical Investment Opportunities",
+    ],
+    functionality:
+      "At its core, Hejaz Financial Services integrates Islamic principles into modern financial products, offering a comprehensive suite of services that cater to the financial needs of Muslims in Australia. By ensuring all offerings are Shariah-compliant, Hejaz enables clients to manage their finances, invest, and plan for the future without compromising their religious beliefs.",
+    technologies: [vue, node, mongo, docker],
+    functionalityImage: [project8, project2, project3],
   },
 ];
