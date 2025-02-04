@@ -98,7 +98,7 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Name"
-              className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 w-full sm:w-[48%] border-[#D1D1D1] text-black"
+              className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 pl-3 w-full sm:w-[48%] border-[#D1D1D1] text-black"
               value={formData.name}
               onChange={handleChange}
             />
@@ -106,7 +106,7 @@ const Contact = () => {
               type="phone"
               name="phone"
               placeholder="Phone"
-              className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 w-full sm:w-[48%] border-[#D1D1D1] text-black"
+              className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 pl-3 w-full sm:w-[48%] border-[#D1D1D1] text-black"
               value={formData.phone}
               onChange={handleChange}
             />
@@ -115,7 +115,7 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Email"
-            className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 w-full border-[#D1D1D1] text-black"
+            className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 pl-3 w-full border-[#D1D1D1] text-black"
             value={formData.email}
             onChange={handleChange}
           />
@@ -124,7 +124,7 @@ const Contact = () => {
             type="text"
             name="project"
             placeholder="Project"
-            className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 w-full border-[#D1D1D1] text-black"
+            className="border rounded-[10px] placeholder:text-[#D1D1D1] h-[60px] p-1 pl-3 w-full border-[#D1D1D1] text-black"
             value={formData.project}
             onChange={handleChange}
           />
@@ -132,7 +132,7 @@ const Contact = () => {
             type="text"
             name="details"
             placeholder="Project Details"
-            className="border rounded-[10px]  placeholder:text-[#D1D1D1] h-[105px] p-1 w-full border-[#D1D1D1] text-black"
+            className="border rounded-[10px]  placeholder:text-[#D1D1D1] h-[105px] p-1 pl-3 w-full border-[#D1D1D1] text-black"
             value={formData.details}
             onChange={handleChange}
           />

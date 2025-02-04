@@ -3,34 +3,37 @@ import teamImage from "@/assets/images/teamImage.svg";
 export const testimonialsData = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Fahad",
     email: "john.doe@example.com",
-    comment: "DevClan exceeded my expectations! I hired them to develop a custom website for my business, and the final product was stunning. They were responsive, professional, and delivered everything on time.",
+    comment:
+      "Devclan was very professional, on time, and delivered high quality work and also the compnay's efforts are second to none.",
     image: teamImage,
     socialMediaIcon: "/icons/twitterIcon.svg",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    email: "jane.smith@example.com",
+    name: "Nekkanti inc",
+    email: "Nekkanti inc",
     comment:
-      "I worked with DevClan to create a mobile app for my startup, and the whole process was seamless. They were extremely detail-oriented and open to feedback throughout the project. ",
+      "We are glad that we could hire Devclan. Company has been consistently cooperative and work per our schedules and is flexible to accommodate frequently changes. Love to hire Devclan again",
     image: teamImage,
     socialMediaIcon: "/icons/linkedinIcon.svg",
   },
   {
     id: 3,
-    name: "Michael Johnson",
+    name: "ShabaaS pay",
     email: "michael.johnson@example.com",
-    comment: "I needed a tailored solution for my eCommerce platform, and DevClan delivered. Their team of developers is highly skilled, and they were able to integrate various complex functionalities with ease.  ",
+    comment:
+      "Devclan and it's tech-savvy team has been working with us for a while. They are very sound in technical capabilities and to understand business requirements. For a long project like ours, feedback and retro calls are crucial and the team has been successfully able to work in delivering a functional and commercially viable product. We will reach out to the team for similar roles in the future",
     image: teamImage,
     socialMediaIcon: "/icons/facebookIcon.svg",
   },
   {
     id: 4,
-    name: "John Doe",
+    name: "Micheal",
     email: "john.doe@example.com",
-    comment: "DevClan built a custom web application for my business, and their technical expertise really shone through. They handled complex back-end requirements with ease and ensured the platform was scalable for future growth. There were some minor issues during testing, but the team quickly resolved them. !",
+    comment:
+      "Devclan's review of our application source, tool choices, and overall needs were exactly what we needed to assess our project's next step",
     image: teamImage,
     socialMediaIcon: "/icons/twitterIcon.svg",
   },
@@ -38,7 +41,8 @@ export const testimonialsData = [
     id: 5,
     name: "Jane Smith",
     email: "jane.smith@example.com",
-    comment: "DevClan built a custom web application for my business, and their technical expertise really shone through. They handled complex back-end requirements with ease and ensured the platform was scalable for future growth. There were some minor issues during testing, but the team quickly resolved them. ",
+    comment:
+      "Devclan is very skilled, and delivers high quality work. This company puts a lot of effort into each task and delivers great results.  It's very rarely that you find a company like this who is able to work on Front End development, and on the same time is able to take care of Pixel Perfect Implementation. Kudos Devclan!",
     image: teamImage,
     socialMediaIcon: "/icons/linkedinIcon.svg",
   },
@@ -46,7 +50,8 @@ export const testimonialsData = [
     id: 6,
     name: "Michael Johnson",
     email: "michael.johnson@example.com",
-    comment: "DevClan built a custom web application for my business, and their technical expertise really shone through. They handled complex back-end requirements with ease and ensured the platform was scalable for future growth. There were some minor issues during testing, but the team quickly resolved them. ",
+    comment:
+      "It is my pleasure to recommend Devclan as systems architect for mobile development. Devclan's CEO is highly respected by his colleagues and also by me…",
     image: teamImage,
     socialMediaIcon: "/icons/facebookIcon.svg",
   },

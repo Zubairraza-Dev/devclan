@@ -17,12 +17,12 @@ const Testimonials = () => {
           >
             <div className="flex justify-between">
               <div className="flex items-center gap-x-2">
-                <Image
+                {/* <Image
                   src={testimonial.image}
                   alt={`${testimonial.name} image`}
                   height={50}
                   width={50}
-                />
+                /> */}
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-600">{testimonial.email}</p>

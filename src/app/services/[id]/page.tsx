@@ -1,6 +1,6 @@
 import ServiceDetailCard from "@/components/ServiceDetailCard";
 import { services } from "@/data/services";
-import { servicesDetail } from "@/data/serviceDetails"
+import { servicesDetail } from "@/data/serviceDetails";
 
 interface ServiceDetailProps {
   params: {
@@ -16,7 +16,9 @@ const ServiceDetail = ({ params }: ServiceDetailProps) => {
     return <div>Service not found</div>;
   }
 
-  const serviceDetails = servicesDetail.find((detail) => detail.id === serviceId);
+  const serviceDetails = servicesDetail.find(
+    (detail) => detail.id === serviceId
+  );
 
   if (!serviceDetails) {
     return <div>Service details not found</div>;
@@ -24,19 +26,18 @@ const ServiceDetail = ({ params }: ServiceDetailProps) => {
 
   return (
     <div className="w-[93%] sm:container mx-auto py-8">
-       
-            <ServiceDetailCard 
-            title={serviceDetails.title}
-            description={serviceDetails.description}
-            image={serviceDetails.image}
-            detailPoints={serviceDetails.deatilPoint} 
-            serviceTitle = {serviceDetails.serviceTitle}
-            detailServices = {serviceDetails.detailServices}
-            icons={serviceDetails.icons}
-            developmentPhase = {serviceDetails.developmentPhases}
-            portfolio = {serviceDetails.portfolio}
-            developmentProcess = {serviceDetails.developmentProcess}
-            />
+      <ServiceDetailCard
+        title={serviceDetails.title}
+        description={serviceDetails.description}
+        image={serviceDetails.image}
+        detailPoints={serviceDetails.deatilPoint}
+        serviceTitle={serviceDetails.serviceTitle}
+        detailServices={serviceDetails.detailServices}
+        icons={serviceDetails.icons}
+        developmentPhase={serviceDetails.developmentPhases}
+        portfolio={serviceDetails.portfolio}
+        developmentProcess={serviceDetails.developmentProcess}
+      />
     </div>
   );
 };
